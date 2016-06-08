@@ -1,0 +1,44 @@
+Binh	KEYWORD1
+ESPHB	KEYWORD1
+
+set_debug	KEYWORD2
+StoreString	KEYWORD2
+StoreStringIP	KEYWORD2
+StoreIP	KEYWORD2
+StoreFloat	KEYWORD2
+StoreSerial	KEYWORD2
+StoreKey	KEYWORD2
+StoreSsid	KEYWORD2
+StorePassword	KEYWORD2
+StoreAdmin	KEYWORD2
+StoreServer	KEYWORD2
+Restore	KEYWORD2
+ReadSBoolean	KEYWORD2
+ReadSFloat	KEYWORD2
+ReadSString	KEYWORD2
+ReadSIP	KEYWORD2
+read_configs	KEYWORD2
+wifi_connect	KEYWORD2
+HttpServerEvent	KEYWORD2
+CheckArlert	KEYWORD2
+GETRequest	KEYWORD2
+jsonEncode	KEYWORD2
+jsonAdd	KEYWORD2
+GETValue	KEYWORD2
+AnalysisValue	KEYWORD2
+AddGetRequest	KEYWORD2
+IPtoString	KEYWORD2
+toggle_pin	KEYWORD2
+get_pin	KEYWORD2
+pin_value	KEYWORD2
+LedBlink	KEYWORD2
+LedOn	KEYWORD2
+LedOff	KEYWORD2
+Timer	KEYWORD2
+SerialEvent	KEYWORD2
+
+
+isdebug	KEYWORD2
+firststart	KEYWORD2
+ipstatic	KEYWORD2
+apmode	KEYWORD2

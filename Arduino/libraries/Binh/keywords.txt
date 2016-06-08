@@ -1,0 +1,35 @@
+Binh	KEYWORD1
+ESPHB	KEYWORD1
+
+Startup	KEYWORD2
+Restore	KEYWORD2
+EEPROMSave	KEYWORD2
+EEPROMRead	KEYWORD2
+wifi_connect	KEYWORD2
+wifi_reconnect	KEYWORD2
+wifi_apmode	KEYWORD2
+SerialEvent	KEYWORD2
+StringToArray	KEYWORD2
+StringToIPAdress	KEYWORD2
+CheckArlert	KEYWORD2
+jsonEncode	KEYWORD2
+jsonAdd	KEYWORD2
+sendGETRequest	KEYWORD2
+sendRequest	KEYWORD2
+AddGetRequest	KEYWORD2
+GETValue	KEYWORD2
+decodeToKeyValue	KEYWORD2
+httpHandlerEvent	KEYWORD2
+togglePin	KEYWORD2
+getPin	KEYWORD2
+pinValue	KEYWORD2
+LedBlink	KEYWORD2
+Timer	KEYWORD2
+LedOn	KEYWORD2
+LedOff	KEYWORD2
+
+
+isdebug	KEYWORD2
+firststart	KEYWORD2
+ipstatic	KEYWORD2
+apmode	KEYWORD2

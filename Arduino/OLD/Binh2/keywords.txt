@@ -1,0 +1,20 @@
+Binh	KEYWORD1
+ESPHB	KEYWORD1
+defaults	KEYWORD1
+configs	KEYWORD2
+request	KEYWORD2
+
+debug	KEYWORD2
+set_debug	KEYWORD2
+store	KEYWORD2
+wifi_connect	KEYWORD2
+IPtoString	KEYWORD2
+get_ipstatic	KEYWORD2
+save_ip	KEYWORD2
+read_configs	KEYWORD2
+save_configs	KEYWORD2
+DynDNS	KEYWORD2
+restore	KEYWORD2
+jsonEncode	KEYWORD2
+getDecode	KEYWORD2
+wifi_APconnect	KEYWORD2

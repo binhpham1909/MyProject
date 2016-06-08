@@ -1,0 +1,269 @@
+[33mcommit 3fa3a3808da166409401f2a42feda51a2a0311cd[m
+Author: binhpham <binhpham@hbinvent.com>
+Date:   Wed Apr 20 21:44:44 2016 +0700
+
+    a
+
+[33mcommit f3549043dc656be1c754a52dba049d86ed838cf4[m
+Author: binhpham <binhpham@hbinvent.com>
+Date:   Wed Apr 20 21:43:41 2016 +0700
+
+    test commit
+
+[33mcommit 73e1083272b3d29df6e2bc4a680321dc0f4c60b1[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Tue Apr 19 21:16:42 2016 +0700
+
+    add pro
+
+[33mcommit 7d7de776d7bbe359686924d7c56a3572ec2dd93c[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Mon Mar 21 19:31:51 2016 +0700
+
+    a
+
+[33mcommit c74ca902753d8bf9c8d51b3851abafbf9ef95280[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Thu Mar 17 17:03:49 2016 +0700
+
+    a
+
+[33mcommit 2910b90c75a24fdc7ab7a57bcba0beee934cb6d7[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Thu Mar 17 08:50:14 2016 +0700
+
+    a
+
+[33mcommit c28bd1df18fb06ab05d8932852089de1fc5edd82[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Thu Mar 17 00:38:22 2016 +0700
+
+    data
+
+[33mcommit 444e667ce3ea0c6e2e776418ba9726004886b79b[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Wed Mar 16 22:49:16 2016 +0700
+
+    DHT opti
+
+[33mcommit 829c11d49028d020507e09d4c1ab1b543c28d37c[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Sat Mar 12 17:18:02 2016 +0700
+
+    remove struct, separate to variable
+
+[33mcommit 78b35402f76e2a934aa4960ba8910c3fcd6f149e[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Fri Mar 4 16:53:08 2016 +0700
+
+    ..
+
+[33mcommit 4aaa6e44a5869aaeee436f1dd4e12586277d03b1[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Thu Mar 3 17:00:15 2016 +0700
+
+    add dictionary library
+
+[33mcommit b8d1cd544fa8efb6db8fa14871e700d64240cd26[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Wed Mar 2 23:45:13 2016 +0700
+
+    .
+
+[33mcommit 2be51aa852cf548e8d5dad53b09588caa989811b[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Wed Mar 2 23:39:24 2016 +0700
+
+    ...
+
+[33mcommit 3e6d7f39c851da12f5080f72e290eafa378f9e9f[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Wed Mar 2 16:45:35 2016 +0700
+
+    move library to sub folder
+
+[33mcommit a4709f92e7498bc2c1493b010c1ac93bbb5b2695[m
+Merge: 99946ea f20a0ec
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Wed Mar 2 14:59:26 2016 +0700
+
+    Merge pull request #1 from binhpham1909/pcedit
+    
+    re define library
+
+[33mcommit f20a0ec4950e90f0ad8fec3e63a9fa342477c59a[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Tue Mar 1 22:46:24 2016 +0700
+
+    re define library
+
+[33mcommit 99946ea1e8d6a2b5aab38a582853fdb18c0c714d[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Mon Feb 29 16:39:50 2016 +0700
+
+    rename library
+
+[33mcommit b447d72c0352fd48c1722bd26bdffe59548efaad[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Wed Feb 24 16:55:00 2016 +0700
+
+    schedue
+
+[33mcommit 7c8032fc01d5ff61aa8e2a0a0549de623ac1f6f1[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Wed Feb 24 11:53:35 2016 +0700
+
+    add rel
+
+[33mcommit 55e1738039512c78c79b9fcd480a740e746c3ed8[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Tue Feb 23 16:21:19 2016 +0700
+
+    next separate
+
+[33mcommit e4b1671486a61590ccbcfa6997970772f5f1d876[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Tue Feb 23 11:51:42 2016 +0700
+
+    separate class
+
+[33mcommit c2428385a5a3b7ee9423075411bceb64eb5c5acf[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Mon Feb 22 16:34:49 2016 +0700
+
+    optimize DHT
+
+[33mcommit 0f49b5e697821bef60ebbcbd9c218666950bb9e5[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Mon Feb 22 11:57:22 2016 +0700
+
+    run
+
+[33mcommit e30c7a154812f9097d7652e27d68ef3d9907581e[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Sun Feb 21 00:14:14 2016 +0700
+
+    edited complete
+
+[33mcommit 168609c883aa1f89936cbe7242e2a6e96b9f7bed[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Sat Feb 20 20:00:01 2016 +0700
+
+    perform continous
+
+[33mcommit b572503e66114c19bc9e37bcef2d2865513bd5cf[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Fri Feb 19 23:16:27 2016 +0700
+
+    perfomance eeprom lib
+
+[33mcommit b941c0b6c8a1f6607dfa260002d165ce5f227a97[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Fri Feb 19 21:28:32 2016 +0700
+
+    add lib
+
+[33mcommit 53ffca4201d40a7aa180a3b649eb3de7f8c393bd[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Thu Feb 18 16:44:58 2016 +0700
+
+    Forward const to FPSTR
+
+[33mcommit a3606245438730ba2f25b1e1a4b4f6cd93bd46de[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Wed Feb 17 11:59:15 2016 +0700
+
+    autosave
+
+[33mcommit 783b5fbba484970899a34aaa1e9d0ecef824e628[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Wed Feb 17 11:15:33 2016 +0700
+
+    edit lib
+
+[33mcommit 29ccdb4178e800c2827015f685c1433152264303[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Fri Feb 5 14:27:01 2016 +0700
+
+    edit s
+
+[33mcommit d54d99528e70c4dd18bfc1c5678575fdc0c1ecfd[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Fri Feb 5 14:26:43 2016 +0700
+
+    add socket lib
+
+[33mcommit 09a6e791d3a1dbcfd34a6ecd0fe4df8a56039254[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Mon Feb 15 15:13:42 2016 +0700
+
+    version next Binh library, backup old version
+
+[33mcommit 0ecb4b0ede5afe6e87cd5753ce71deea6fbdcb2c[m
+Author: Pham Huu Binh <binhpham1909@gmail.com>
+Date:   Fri Feb 5 11:17:14 2016 +0700
+
+    add library
+
+[33mcommit 8059fbb6b92a6752fb652945ebea0690311016a0[m
+Merge: 880ae4b dd7da7b
+Author: binhpham1909 <binhpham1909@gmail.com>
+Date:   Wed Jan 6 10:38:24 2016 +0700
+
+    Merge branch 'master' of https://github.com/binhpham1909/Arduino
+
+[33mcommit 880ae4b549562e0d927a16f1b99a145c1cac15a5[m
+Author: binhpham1909 <binhpham1909@gmail.com>
+Date:   Wed Jan 6 10:38:18 2016 +0700
+
+    add http command
+
+[33mcommit dd7da7b17db351e03d4bfb8d9737e5b398ddbb79[m
+Author: binhpham1909 <binhpham1909@gmail.com>
+Date:   Sun Dec 20 10:51:00 2015 +0700
+
+    sap xep lai
+    
+    sap xep lai file
+
+[33mcommit 6b9e4bee9d1d58d48078762dc3df24fd141970a3[m
+Author: binhpham1909 <binhpham1909@gmail.com>
+Date:   Mon Nov 9 21:03:53 2015 +0700
+
+    update setting over wifi
+
+[33mcommit 0cec3275c8671c913e36f7b380a1949cc3ccac10[m
+Author: binhpham1909 <binhpham1909@gmail.com>
+Date:   Mon Nov 9 20:28:10 2015 +0700
+
+    Revert "change variable"
+    
+    This reverts commit 4e983c9951dc05080475adc8be9806594e85c49b.
+
+[33mcommit 4e983c9951dc05080475adc8be9806594e85c49b[m
+Author: binhpham1909 <binhpham1909@gmail.com>
+Date:   Tue Nov 3 11:09:15 2015 +0700
+
+    change variable
+
+[33mcommit d0cc806d660f781d44f91db855c7ec37d646204e[m
+Author: binhpham1909 <binhpham1909@gmail.com>
+Date:   Tue Nov 3 11:00:09 2015 +0700
+
+    add function
+    
+    add APmode at startup when not connect to STA
+
+[33mcommit 9853d3be39ec7161c746d1a0f766b175630a405f[m
+Author: binhpham1909 <binhpham1909@gmail.com>
+Date:   Tue Nov 3 10:30:33 2015 +0700
+
+    add function
+    
+    add process function for http server
+
+[33mcommit 0498c563d47ea82687822659a1b568d071bf55bc[m
+Author: binhpham1909 <binhpham1909@gmail.com>
+Date:   Tue Nov 3 09:10:18 2015 +0700
+
+    ver1
