@@ -1,0 +1,12 @@
+.has-errors {
+	color:red;
+    border-left: 4px solid #cc2511;
+	border-right: 4px solid #cc2511;
+}
+.no-errors {
+    border-left: 4px solid #3d8b3d;
+	border-right: 4px solid #3d8b3d;
+}
+.margrin-top {
+	margin-top:4px !important;
+}

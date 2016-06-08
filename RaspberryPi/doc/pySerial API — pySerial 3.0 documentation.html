@@ -1,0 +1,2008 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0059)https://pythonhosted.org/pyserial/pyserial_api.html#classes -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <title>pySerial API — pySerial 3.0 documentation</title>
+    
+    <link rel="stylesheet" href="./pySerial API — pySerial 3.0 documentation_files/default.css" type="text/css">
+    <link rel="stylesheet" href="./pySerial API — pySerial 3.0 documentation_files/pygments.css" type="text/css">
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="./pySerial API — pySerial 3.0 documentation_files/jquery.js"></script>
+    <script type="text/javascript" src="./pySerial API — pySerial 3.0 documentation_files/underscore.js"></script>
+    <script type="text/javascript" src="./pySerial API — pySerial 3.0 documentation_files/doctools.js"></script>
+    <link rel="top" title="pySerial 3.0 documentation" href="https://pythonhosted.org/pyserial/index.html">
+    <link rel="next" title="Tools" href="https://pythonhosted.org/pyserial/tools.html">
+    <link rel="prev" title="Short introduction" href="https://pythonhosted.org/pyserial/shortintro.html"> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="https://pythonhosted.org/pyserial/genindex.html" title="General Index" accesskey="I">index</a></li>
+        <li class="right">
+          <a href="https://pythonhosted.org/pyserial/py-modindex.html" title="Python Module Index">modules</a> |</li>
+        <li class="right">
+          <a href="https://pythonhosted.org/pyserial/tools.html" title="Tools" accesskey="N">next</a> |</li>
+        <li class="right">
+          <a href="https://pythonhosted.org/pyserial/shortintro.html" title="Short introduction" accesskey="P">previous</a> |</li>
+        <li><a href="https://pythonhosted.org/pyserial/index.html">pySerial 3.0 documentation</a> »</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-serial">
+<span id="pyserial-api"></span><h1>pySerial API<a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#module-serial" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#classes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="native-ports">
+<h3>Native ports<a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#native-ports" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="serial.Serial">
+<em class="property">class </em><tt class="descclassname">serial.</tt><tt class="descname">Serial</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="serial.Serial.__init__">
+<tt class="descname">__init__</tt><big>(</big><em>port=None</em>, <em>baudrate=9600</em>, <em>bytesize=EIGHTBITS</em>, <em>parity=PARITY_NONE</em>, <em>stopbits=STOPBITS_ONE</em>, <em>timeout=None</em>, <em>xonxoff=False</em>, <em>rtscts=False</em>, <em>write_timeout=None</em>, <em>dsrdtr=False</em>, <em>inter_byte_timeout=None</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>port</strong> – Device name or <tt class="xref py py-const docutils literal"><span class="pre">None</span></tt>.</li>
+<li><strong>baudrate</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) – Baud rate such as 9600 or 115200 etc.</li>
+<li><strong>bytesize</strong> – Number of data bits. Possible values:
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.FIVEBITS" title="serial.FIVEBITS"><tt class="xref py py-const docutils literal"><span class="pre">FIVEBITS</span></tt></a>, <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.SIXBITS" title="serial.SIXBITS"><tt class="xref py py-const docutils literal"><span class="pre">SIXBITS</span></tt></a>, <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.SEVENBITS" title="serial.SEVENBITS"><tt class="xref py py-const docutils literal"><span class="pre">SEVENBITS</span></tt></a>,
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.EIGHTBITS" title="serial.EIGHTBITS"><tt class="xref py py-const docutils literal"><span class="pre">EIGHTBITS</span></tt></a></li>
+<li><strong>parity</strong> – Enable parity checking. Possible values:
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.PARITY_NONE" title="serial.PARITY_NONE"><tt class="xref py py-const docutils literal"><span class="pre">PARITY_NONE</span></tt></a>, <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.PARITY_EVEN" title="serial.PARITY_EVEN"><tt class="xref py py-const docutils literal"><span class="pre">PARITY_EVEN</span></tt></a>, <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.PARITY_ODD" title="serial.PARITY_ODD"><tt class="xref py py-const docutils literal"><span class="pre">PARITY_ODD</span></tt></a>
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.PARITY_MARK" title="serial.PARITY_MARK"><tt class="xref py py-const docutils literal"><span class="pre">PARITY_MARK</span></tt></a>, <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.PARITY_SPACE" title="serial.PARITY_SPACE"><tt class="xref py py-const docutils literal"><span class="pre">PARITY_SPACE</span></tt></a></li>
+<li><strong>stopbits</strong> – Number of stop bits. Possible values:
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.STOPBITS_ONE" title="serial.STOPBITS_ONE"><tt class="xref py py-const docutils literal"><span class="pre">STOPBITS_ONE</span></tt></a>, <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.STOPBITS_ONE_POINT_FIVE" title="serial.STOPBITS_ONE_POINT_FIVE"><tt class="xref py py-const docutils literal"><span class="pre">STOPBITS_ONE_POINT_FIVE</span></tt></a>,
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.STOPBITS_TWO" title="serial.STOPBITS_TWO"><tt class="xref py py-const docutils literal"><span class="pre">STOPBITS_TWO</span></tt></a></li>
+<li><strong>timeout</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) – Set a read timeout value.</li>
+<li><strong>xonxoff</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Enable software flow control.</li>
+<li><strong>rtscts</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Enable hardware (RTS/CTS) flow control.</li>
+<li><strong>dsrdtr</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Enable hardware (DSR/DTR) flow control.</li>
+<li><strong>write_timeout</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) – Set a write timeout value.</li>
+<li><strong>inter_byte_timeout</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) – Inter-character timeout, <tt class="xref py py-const docutils literal"><span class="pre">None</span></tt> to disable (default).</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ValueError</strong> – Will be raised when parameter are out of range, e.g. baud rate, data bits.</li>
+<li><strong>SerialException</strong> – In case the device can not be found or can not be configured.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The port is immediately opened on object creation, when a <em>port</em> is
+given. It is not opened when <em>port</em> is <tt class="xref py py-const docutils literal"><span class="pre">None</span></tt> and a successive call
+to <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.open" title="serial.Serial.open"><tt class="xref py py-meth docutils literal"><span class="pre">open()</span></tt></a> is required.</p>
+<p><em>port</em> is a device name: depending on operating system. e.g.
+<tt class="docutils literal"><span class="pre">/dev/ttyUSB0</span></tt> on GNU/Linux or <tt class="docutils literal"><span class="pre">COM3</span></tt> on Windows.</p>
+<p>The parameter <em>baudrate</em> can be one of the standard values:
+50, 75, 110, 134, 150, 200, 300, 600, 1200, 1800, 2400, 4800,
+9600, 19200, 38400, 57600, 115200.
+These are well supported on all platforms.</p>
+<p>Standard values above 115200, such as: 230400, 460800, 500000, 576000,
+921600, 1000000, 1152000, 1500000, 2000000, 2500000, 3000000, 3500000,
+4000000 also work on many platforms and devices.</p>
+<p>Non-standard values are also supported on some platforms (GNU/Linux, MAC
+OSX &gt;= Tiger, Windows). Though, even on these platforms some serial
+ports may reject non-standard values.</p>
+<p>Possible values for the parameter <em>timeout</em> which controls the behavior
+of <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.read" title="serial.Serial.read"><tt class="xref py py-meth docutils literal"><span class="pre">read()</span></tt></a>:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">timeout</span> <span class="pre">=</span> <span class="pre">None</span></tt>:  wait forever / until requested number of bytes
+are received</li>
+<li><tt class="docutils literal"><span class="pre">timeout</span> <span class="pre">=</span> <span class="pre">0</span></tt>:     non-blocking mode, return immediately in any case,
+returning zero or more, up to the requested number of bytes</li>
+<li><tt class="docutils literal"><span class="pre">timeout</span> <span class="pre">=</span> <span class="pre">x</span></tt>:     set timeout to <tt class="docutils literal"><span class="pre">x</span></tt> seconds (float allowed)
+returns immediately when the requested number of bytes are available,
+otherwise wait until the timeout expires and return all bytes that
+were received until then.</li>
+</ul>
+<p><a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.write" title="serial.Serial.write"><tt class="xref py py-meth docutils literal"><span class="pre">write()</span></tt></a> is blocking by default, unless <em>write_timeout</em> is set.
+For possible values refer to the list for <em>timeout</em> above.</p>
+<p>Note that enabling both flow control methods (<em>xonxoff</em> and <em>rtscts</em>)
+together may not be supported. It is common to use one of the methods
+at once, not both.</p>
+<p><em>dsrdtr</em> is not supported by all platforms (silently ignored). Setting
+it to <tt class="docutils literal"><span class="pre">None</span></tt> has the effect that its state follows <em>rtscts</em>.</p>
+<p>Also consider using the function <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.serial_for_url" title="serial.serial_for_url"><tt class="xref py py-func docutils literal"><span class="pre">serial_for_url()</span></tt></a> instead of
+creating Serial instances directly.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 2.5: </span><em>dsrdtr</em> now defaults to <tt class="docutils literal"><span class="pre">False</span></tt> (instead of <em>None</em>)</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 3.0: </span>numbers as <em>port</em> argument are no longer supported</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.open">
+<tt class="descname">open</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open port.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.close">
+<tt class="descname">close</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close port immediately.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.__del__">
+<tt class="descname">__del__</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.__del__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Destructor, close port when serial port instance is freed.</p>
+</dd></dl>
+
+<p>The following methods may raise <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.SerialException" title="serial.SerialException"><tt class="xref py py-exc docutils literal"><span class="pre">SerialException</span></tt></a> when applied to a closed
+port.</p>
+<dl class="method">
+<dt id="serial.Serial.read">
+<tt class="descname">read</tt><big>(</big><em>size=1</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.read" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>size</strong> – Number of bytes to read.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Bytes read from the port.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bytes</td>
+</tr>
+</tbody>
+</table>
+<p>Read <em>size</em> bytes from the serial port. If a timeout is set it may
+return less characters as requested. With no timeout it will block
+until the requested number of bytes is read.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 2.5: </span>Returns an instance of <tt class="xref py py-class docutils literal"><span class="pre">bytes</span></tt> when available (Python 2.6
+and newer) and <a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><tt class="xref py py-class docutils literal"><span class="pre">str</span></tt></a> otherwise.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.write">
+<tt class="descname">write</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.write" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – Data to send.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Number of bytes written.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Raises SerialTimeoutException:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">In case a write timeout is configured for the port and the time is
+exceeded.</td>
+</tr>
+</tbody>
+</table>
+<p>Write the bytes <em>data</em> to the port. This should be of type <tt class="docutils literal"><span class="pre">bytes</span></tt>
+(or compatible such as <tt class="docutils literal"><span class="pre">bytearray</span></tt> or <tt class="docutils literal"><span class="pre">memoryview</span></tt>). Unicode
+strings must be encoded (e.g. <tt class="docutils literal"><span class="pre">'hello'.encode('utf-8'</span></tt>).</p>
+</dd></dl>
+
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 2.5: </span>Accepts instances of <tt class="xref py py-class docutils literal"><span class="pre">bytes</span></tt> and <a class="reference external" href="http://docs.python.org/library/functions.html#bytearray" title="(in Python v2.7)"><tt class="xref py py-class docutils literal"><span class="pre">bytearray</span></tt></a> when
+    available (Python 2.6 and newer) and <a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><tt class="xref py py-class docutils literal"><span class="pre">str</span></tt></a> otherwise.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 2.5: </span>Write returned <tt class="docutils literal"><span class="pre">None</span></tt> in previous versions.</p>
+</div>
+</div>
+<dl class="method">
+<dt id="serial.Serial.flush">
+<tt class="descname">flush</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.flush" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flush of file like objects. In this case, wait until all data is
+written.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.in_waiting">
+<tt class="descname">in_waiting</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.in_waiting" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Getter:</th><td class="field-body">Get the number of bytes in the input buffer</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+<p>Return the number of bytes in the receive buffer.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 3.0: </span>changed to property from <tt class="docutils literal"><span class="pre">inWaiting()</span></tt></p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.out_waiting">
+<tt class="descname">out_waiting</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.out_waiting" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Getter:</th><td class="field-body">Get the number of bytes in the output buffer</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Platform:</th><td class="field-body">Posix</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Platform:</th><td class="field-body">Windows</td>
+</tr>
+</tbody>
+</table>
+<p>Return the number of bytes in the output buffer.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 2.7: </span>(Posix support added)</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 3.0: </span>changed to property from <tt class="docutils literal"><span class="pre">outWaiting()</span></tt></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.reset_input_buffer">
+<tt class="descname">reset_input_buffer</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.reset_input_buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flush input buffer, discarding all it’s contents.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 3.0: </span>renamed from <tt class="docutils literal"><span class="pre">flushInput()</span></tt></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.reset_output_buffer">
+<tt class="descname">reset_output_buffer</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.reset_output_buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear output buffer, aborting the current output and
+discarding all that is in the buffer.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 3.0: </span>renamed from <tt class="docutils literal"><span class="pre">flushOutput()</span></tt></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.send_break">
+<tt class="descname">send_break</tt><big>(</big><em>duration=0.25</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.send_break" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>duration</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) – Time to activate the BREAK condition.</td>
+</tr>
+</tbody>
+</table>
+<p>Send break condition. Timed, returns to idle state after given
+duration.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.break_condition">
+<tt class="descname">break_condition</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.break_condition" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Getter:</th><td class="field-body">Get the current BREAK state</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Setter:</th><td class="field-body">Control the BREAK state</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+<p>When set to <tt class="docutils literal"><span class="pre">True</span></tt> activate BREAK condition, else disable.
+Controls TXD. When active, no transmitting is possible.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.rts">
+<tt class="descname">rts</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.rts" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Setter:</th><td class="field-body">Set the state of the RTS line</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Getter:</th><td class="field-body">Return the state of the RTS line</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+<p>Set RTS line to specified logic level. It is possible to assign this
+value before opening the serial port, then the value is applied uppon
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.open" title="serial.Serial.open"><tt class="xref py py-meth docutils literal"><span class="pre">open()</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.dtr">
+<tt class="descname">dtr</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.dtr" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Setter:</th><td class="field-body">Set the state of the DTR line</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Getter:</th><td class="field-body">Return the state of the DTR line</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+<p>Set DTR line to specified logic level. It is possible to assign this
+value before opening the serial port, then the value is applied uppon
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.open" title="serial.Serial.open"><tt class="xref py py-meth docutils literal"><span class="pre">open()</span></tt></a>.</p>
+</dd></dl>
+
+<p>Read-only attributes:</p>
+<dl class="attribute">
+<dt id="serial.Serial.name">
+<tt class="descname">name</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.name" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Getter:</th><td class="field-body">Device name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.5.</span></p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.cts">
+<tt class="descname">cts</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.cts" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Getter:</th><td class="field-body">Get the state of the CTS line</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+<p>Return the state of the CTS line.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.dsr">
+<tt class="descname">dsr</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.dsr" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Getter:</th><td class="field-body">Get the state of the DSR line</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+<p>Return the state of the DSR line.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.ri">
+<tt class="descname">ri</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.ri" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Getter:</th><td class="field-body">Get the state of the RI line</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+<p>Return the state of the RI line.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.cd">
+<tt class="descname">cd</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.cd" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Getter:</th><td class="field-body">Get the state of the CD line</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+<p>Return the state of the CD line</p>
+</dd></dl>
+
+<p>New values can be assigned to the following attributes (properties), the
+port will be reconfigured, even if it’s opened at that time:</p>
+<dl class="attribute">
+<dt id="serial.Serial.port">
+<tt class="descname">port</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.port" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+<p>Read or write port. When the port is already open, it will be closed
+and reopened with the new setting.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.baudrate">
+<tt class="descname">baudrate</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.baudrate" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Getter:</th><td class="field-body">Get current baud rate</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Setter:</th><td class="field-body">Set new baud rate</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+<p>Read or write current baud rate setting.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.bytesize">
+<tt class="descname">bytesize</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.bytesize" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Getter:</th><td class="field-body">Get current byte size</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Setter:</th><td class="field-body">Set new byte size. Possible values:
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.FIVEBITS" title="serial.FIVEBITS"><tt class="xref py py-const docutils literal"><span class="pre">FIVEBITS</span></tt></a>, <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.SIXBITS" title="serial.SIXBITS"><tt class="xref py py-const docutils literal"><span class="pre">SIXBITS</span></tt></a>, <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.SEVENBITS" title="serial.SEVENBITS"><tt class="xref py py-const docutils literal"><span class="pre">SEVENBITS</span></tt></a>,
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.EIGHTBITS" title="serial.EIGHTBITS"><tt class="xref py py-const docutils literal"><span class="pre">EIGHTBITS</span></tt></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+<p>Read or write current data byte size setting.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.parity">
+<tt class="descname">parity</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.parity" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Getter:</th><td class="field-body">Get current parity setting</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Setter:</th><td class="field-body">Set new parity mode. Possible values:
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.PARITY_NONE" title="serial.PARITY_NONE"><tt class="xref py py-const docutils literal"><span class="pre">PARITY_NONE</span></tt></a>, <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.PARITY_EVEN" title="serial.PARITY_EVEN"><tt class="xref py py-const docutils literal"><span class="pre">PARITY_EVEN</span></tt></a>, <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.PARITY_ODD" title="serial.PARITY_ODD"><tt class="xref py py-const docutils literal"><span class="pre">PARITY_ODD</span></tt></a>
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.PARITY_MARK" title="serial.PARITY_MARK"><tt class="xref py py-const docutils literal"><span class="pre">PARITY_MARK</span></tt></a>, <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.PARITY_SPACE" title="serial.PARITY_SPACE"><tt class="xref py py-const docutils literal"><span class="pre">PARITY_SPACE</span></tt></a></td>
+</tr>
+</tbody>
+</table>
+<p>Read or write current parity setting.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.stopbits">
+<tt class="descname">stopbits</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.stopbits" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Getter:</th><td class="field-body">Get current stop bit setting</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Setter:</th><td class="field-body">Set new stop bit setting. Possible values:
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.STOPBITS_ONE" title="serial.STOPBITS_ONE"><tt class="xref py py-const docutils literal"><span class="pre">STOPBITS_ONE</span></tt></a>, <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.STOPBITS_ONE_POINT_FIVE" title="serial.STOPBITS_ONE_POINT_FIVE"><tt class="xref py py-const docutils literal"><span class="pre">STOPBITS_ONE_POINT_FIVE</span></tt></a>,
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.STOPBITS_TWO" title="serial.STOPBITS_TWO"><tt class="xref py py-const docutils literal"><span class="pre">STOPBITS_TWO</span></tt></a></td>
+</tr>
+</tbody>
+</table>
+<p>Read or write current stop bit width setting.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.timeout">
+<tt class="descname">timeout</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.timeout" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Getter:</th><td class="field-body">Get current read timeout setting</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Setter:</th><td class="field-body">Set read timeout</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float (seconds)</td>
+</tr>
+</tbody>
+</table>
+<p>Read or write current read timeout setting.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.write_timeout">
+<tt class="descname">write_timeout</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.write_timeout" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Getter:</th><td class="field-body">Get current write timeout setting</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Setter:</th><td class="field-body">Set write timeout</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float (seconds)</td>
+</tr>
+</tbody>
+</table>
+<p>Read or write current write timeout setting.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 3.0: </span>renamed from <tt class="docutils literal"><span class="pre">writeTimeout</span></tt></p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.inter_byte_timeout">
+<tt class="descname">inter_byte_timeout</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.inter_byte_timeout" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Getter:</th><td class="field-body">Get current inter byte timeout setting</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Setter:</th><td class="field-body">Disable (<tt class="docutils literal"><span class="pre">None</span></tt>) or enable the inter byte timeout</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">float or None</td>
+</tr>
+</tbody>
+</table>
+<p>Read or write current inter byte timeout setting.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 3.0: </span>renamed from <tt class="docutils literal"><span class="pre">interCharTimeout</span></tt></p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.xonxoff">
+<tt class="descname">xonxoff</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.xonxoff" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Getter:</th><td class="field-body">Get current software flow control setting</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Setter:</th><td class="field-body">Enable or disable software flow control</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+<p>Read or write current software flow control rate setting.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.rtscts">
+<tt class="descname">rtscts</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.rtscts" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Getter:</th><td class="field-body">Get current hardware flow control setting</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Setter:</th><td class="field-body">Enable or disable hardware flow control</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+<p>Read or write current hardware flow control setting.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.dsrdtr">
+<tt class="descname">dsrdtr</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.dsrdtr" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Getter:</th><td class="field-body">Get current hardware flow control setting</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Setter:</th><td class="field-body">Enable or disable hardware flow control</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+<p>Read or write current hardware flow control setting.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.rs485_mode">
+<tt class="descname">rs485_mode</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.rs485_mode" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Getter:</th><td class="field-body">Get the current RS485 settings</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Setter:</th><td class="field-body">Disable (<tt class="docutils literal"><span class="pre">None</span></tt>) or enable the RS485 settings</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rs485.RS485Settings" title="serial.rs485.RS485Settings"><tt class="xref py py-class docutils literal"><span class="pre">rs485.RS485Settings</span></tt></a> or <tt class="docutils literal"><span class="pre">None</span></tt></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Platform:</th><td class="field-body">Posix (Linux, limited set of hardware)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Platform:</th><td class="field-body">Windows (only RTS on TX possible)</td>
+</tr>
+</tbody>
+</table>
+<p>Attribute to configure RS485 support. When set to an instance of
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rs485.RS485Settings" title="serial.rs485.RS485Settings"><tt class="xref py py-class docutils literal"><span class="pre">rs485.RS485Settings</span></tt></a> and supported by OS, RTS will be active
+when data is sent and inactive otherwise (for reception). The
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rs485.RS485Settings" title="serial.rs485.RS485Settings"><tt class="xref py py-class docutils literal"><span class="pre">rs485.RS485Settings</span></tt></a> class provides additional settings
+supported on some platforms.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</dd></dl>
+
+<p>The following constants are also provided:</p>
+<dl class="attribute">
+<dt id="serial.Serial.BAUDRATES">
+<tt class="descname">BAUDRATES</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.BAUDRATES" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of valid baud rates. The list may be incomplete, such that higher
+and/or intermediate baud rates may also be supported by the device
+(Read Only).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.BYTESIZES">
+<tt class="descname">BYTESIZES</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.BYTESIZES" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of valid byte sizes for the device (Read Only).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.PARITIES">
+<tt class="descname">PARITIES</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.PARITIES" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of valid parities for the device (Read Only).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.STOPBITS">
+<tt class="descname">STOPBITS</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.STOPBITS" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of valid stop bit widths for the device (Read Only).</p>
+</dd></dl>
+
+<p>The following methods are for compatibility with the <a class="reference external" href="http://docs.python.org/library/io.html#module-io" title="(in Python v2.7)"><tt class="xref py py-mod docutils literal"><span class="pre">io</span></tt></a> library.</p>
+<dl class="method">
+<dt id="serial.Serial.readable">
+<tt class="descname">readable</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.readable" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True</td>
+</tr>
+</tbody>
+</table>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.5.</span></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.writable">
+<tt class="descname">writable</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.writable" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True</td>
+</tr>
+</tbody>
+</table>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.5.</span></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.seekable">
+<tt class="descname">seekable</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.seekable" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">False</td>
+</tr>
+</tbody>
+</table>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.5.</span></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.readinto">
+<tt class="descname">readinto</tt><big>(</big><em>b</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.readinto" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>b</strong> – bytearray or array instance</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Number of byte read</td>
+</tr>
+</tbody>
+</table>
+<p>Read up to len(b) bytes into <a class="reference external" href="http://docs.python.org/library/functions.html#bytearray" title="(in Python v2.7)"><tt class="xref py py-class docutils literal"><span class="pre">bytearray</span></tt></a> <em>b</em> and return the
+number of bytes read.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.5.</span></p>
+</div>
+</dd></dl>
+
+<p>The port settings can be read and written as dictionary. The following
+keys are supported: <tt class="docutils literal"><span class="pre">write_timeout</span></tt>, <tt class="docutils literal"><span class="pre">inter_byte_timeout</span></tt>,
+<tt class="docutils literal"><span class="pre">dsrdtr</span></tt>, <tt class="docutils literal"><span class="pre">baudrate</span></tt>, <tt class="docutils literal"><span class="pre">timeout</span></tt>, <tt class="docutils literal"><span class="pre">parity</span></tt>, <tt class="docutils literal"><span class="pre">bytesize</span></tt>,
+<tt class="docutils literal"><span class="pre">rtscts</span></tt>, <tt class="docutils literal"><span class="pre">stopbits</span></tt>, <tt class="docutils literal"><span class="pre">xonxoff</span></tt></p>
+<dl class="method">
+<dt id="serial.Serial.get_settings">
+<tt class="descname">get_settings</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.get_settings" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a dictionary with current port settings.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+<p>Get a dictionary with port settings. This is useful to backup the
+current settings so that a later point in time they can be restored
+using <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.apply_settings" title="serial.Serial.apply_settings"><tt class="xref py py-meth docutils literal"><span class="pre">apply_settings()</span></tt></a>.</p>
+<p>Note that control lines (RTS/DTR) are part of the settings.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.5.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 3.0: </span>renamed from <tt class="docutils literal"><span class="pre">getSettingsDict</span></tt></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.apply_settings">
+<tt class="descname">apply_settings</tt><big>(</big><em>d</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.apply_settings" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>d</strong> (<a class="reference external" href="http://docs.python.org/library/stdtypes.html#dict" title="(in Python v2.7)"><em>dict</em></a>) – a dictionary with port settings.</td>
+</tr>
+</tbody>
+</table>
+<p>Applies a dictionary that was created by <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.get_settings" title="serial.Serial.get_settings"><tt class="xref py py-meth docutils literal"><span class="pre">get_settings()</span></tt></a>. Only
+changes are applied and when a key is missing, it means that the
+setting stays unchanged.</p>
+<p>Note that control lines (RTS/DTR) are not changed.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.5.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 3.0: </span>renamed from <tt class="docutils literal"><span class="pre">applySettingsDict</span></tt></p>
+</div>
+</dd></dl>
+
+<p>Platform specific methods.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Programs using the following methods and attributes are not
+portable to other platforms!</p>
+</div>
+<dl class="method">
+<dt id="serial.Serial.nonblocking">
+<tt class="descname">nonblocking</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.nonblocking" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Platform:</th><td class="field-body">Posix</td>
+</tr>
+</tbody>
+</table>
+<p>Configure the device for nonblocking operation. This can be useful if
+the port is used with <a class="reference external" href="http://docs.python.org/library/select.html#module-select" title="(in Python v2.7)"><tt class="xref py py-mod docutils literal"><span class="pre">select</span></tt></a>. Note that <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.timeout" title="serial.Serial.timeout"><tt class="xref py py-attr docutils literal"><span class="pre">timeout</span></tt></a> must
+also be set to <tt class="docutils literal"><span class="pre">0</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.fileno">
+<tt class="descname">fileno</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.fileno" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Platform:</th><td class="field-body">Posix</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">File descriptor.</td>
+</tr>
+</tbody>
+</table>
+<p>Return file descriptor number for the port that is opened by this object.
+It is useful when serial ports are used with <a class="reference external" href="http://docs.python.org/library/select.html#module-select" title="(in Python v2.7)"><tt class="xref py py-mod docutils literal"><span class="pre">select</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.set_input_flow_control">
+<tt class="descname">set_input_flow_control</tt><big>(</big><em>enable</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.set_input_flow_control" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Platform:</th><td class="field-body">Posix</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Set flow control state.</td>
+</tr>
+</tbody>
+</table>
+<p>Manually control flow - when software flow control is enabled.</p>
+<p>This will send XON (true) and XOFF (false) to the other device.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.7: </span>(Posix support added)</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 3.0: </span>renamed from <tt class="docutils literal"><span class="pre">flowControlOut</span></tt></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.set_output_flow_control">
+<tt class="descname">set_output_flow_control</tt><big>(</big><em>enable</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.set_output_flow_control" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Platform:</th><td class="field-body">Posix (HW and SW flow control)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Platform:</th><td class="field-body">Windows (SW flow control only)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>enable</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Set flow control state.</td>
+</tr>
+</tbody>
+</table>
+<p>Manually control flow of outgoing data - when hardware or software flow
+control is enabled.</p>
+<p>Sending will be suspended when called with <tt class="docutils literal"><span class="pre">False</span></tt> and enabled when
+called with <tt class="docutils literal"><span class="pre">True</span></tt>.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 2.7: </span>(renamed on Posix, function was called <tt class="docutils literal"><span class="pre">flowControl</span></tt>)</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 3.0: </span>renamed from <tt class="docutils literal"><span class="pre">setXON</span></tt></p>
+</div>
+</dd></dl>
+
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The following members are deprecated and will be removed in a
+future release.</p>
+</div>
+<dl class="attribute">
+<dt id="serial.Serial.portstr">
+<tt class="descname">portstr</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.portstr" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 2.5: </span>use <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.name" title="serial.Serial.name"><tt class="xref py py-attr docutils literal"><span class="pre">name</span></tt></a> instead</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.inWaiting">
+<tt class="descname">inWaiting</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.inWaiting" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 3.0: </span>see <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.in_waiting" title="serial.Serial.in_waiting"><tt class="xref py py-attr docutils literal"><span class="pre">in_waiting</span></tt></a></p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.writeTimeout">
+<tt class="descname">writeTimeout</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.writeTimeout" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 3.0: </span>see <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.write_timeout" title="serial.Serial.write_timeout"><tt class="xref py py-attr docutils literal"><span class="pre">write_timeout</span></tt></a></p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.interCharTimeout">
+<tt class="descname">interCharTimeout</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.interCharTimeout" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 3.0: </span>see <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.inter_byte_timeout" title="serial.Serial.inter_byte_timeout"><tt class="xref py py-attr docutils literal"><span class="pre">inter_byte_timeout</span></tt></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.sendBreak">
+<tt class="descname">sendBreak</tt><big>(</big><em>duration=0.25</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.sendBreak" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 3.0: </span>see <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.send_break" title="serial.Serial.send_break"><tt class="xref py py-meth docutils literal"><span class="pre">send_break()</span></tt></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.flushInput">
+<tt class="descname">flushInput</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.flushInput" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 3.0: </span>see <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.reset_input_buffer" title="serial.Serial.reset_input_buffer"><tt class="xref py py-meth docutils literal"><span class="pre">reset_input_buffer()</span></tt></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.flushOutput">
+<tt class="descname">flushOutput</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.flushOutput" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 3.0: </span>see <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.reset_output_buffer" title="serial.Serial.reset_output_buffer"><tt class="xref py py-meth docutils literal"><span class="pre">reset_output_buffer()</span></tt></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.setBreak">
+<tt class="descname">setBreak</tt><big>(</big><em>level=True</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.setBreak" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 3.0: </span>see <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.break_condition" title="serial.Serial.break_condition"><tt class="xref py py-attr docutils literal"><span class="pre">break_condition</span></tt></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.setRTS">
+<tt class="descname">setRTS</tt><big>(</big><em>level=True</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.setRTS" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 3.0: </span>see <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.rts" title="serial.Serial.rts"><tt class="xref py py-attr docutils literal"><span class="pre">rts</span></tt></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.setDTR">
+<tt class="descname">setDTR</tt><big>(</big><em>level=True</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.setDTR" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 3.0: </span>see <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.dtr" title="serial.Serial.dtr"><tt class="xref py py-attr docutils literal"><span class="pre">dtr</span></tt></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.getCTS">
+<tt class="descname">getCTS</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.getCTS" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 3.0: </span>see <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.cts" title="serial.Serial.cts"><tt class="xref py py-attr docutils literal"><span class="pre">cts</span></tt></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.getDSR">
+<tt class="descname">getDSR</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.getDSR" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 3.0: </span>see <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.dsr" title="serial.Serial.dsr"><tt class="xref py py-attr docutils literal"><span class="pre">dsr</span></tt></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.getRI">
+<tt class="descname">getRI</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.getRI" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 3.0: </span>see <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.ri" title="serial.Serial.ri"><tt class="xref py py-attr docutils literal"><span class="pre">ri</span></tt></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.getCD">
+<tt class="descname">getCD</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.getCD" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 3.0: </span>see <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.cd" title="serial.Serial.cd"><tt class="xref py py-attr docutils literal"><span class="pre">cd</span></tt></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.getSettingsDict">
+<tt class="descname">getSettingsDict</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.getSettingsDict" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 3.0: </span>see <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.get_settings" title="serial.Serial.get_settings"><tt class="xref py py-meth docutils literal"><span class="pre">get_settings()</span></tt></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.applySettingsDict">
+<tt class="descname">applySettingsDict</tt><big>(</big><em>d</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.applySettingsDict" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 3.0: </span>see <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.apply_settings" title="serial.Serial.apply_settings"><tt class="xref py py-meth docutils literal"><span class="pre">apply_settings()</span></tt></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.outWaiting">
+<tt class="descname">outWaiting</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.outWaiting" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 3.0: </span>see <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.out_waiting" title="serial.Serial.out_waiting"><tt class="xref py py-attr docutils literal"><span class="pre">out_waiting</span></tt></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.setXON">
+<tt class="descname">setXON</tt><big>(</big><em>level=True</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.setXON" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 3.0: </span>see <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.set_output_flow_control" title="serial.Serial.set_output_flow_control"><tt class="xref py py-meth docutils literal"><span class="pre">set_output_flow_control()</span></tt></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.Serial.flowControlOut">
+<tt class="descname">flowControlOut</tt><big>(</big><em>enable</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.flowControlOut" title="Permalink to this definition">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified">Deprecated since version 3.0: </span>see <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.set_input_flow_control" title="serial.Serial.set_input_flow_control"><tt class="xref py py-meth docutils literal"><span class="pre">set_input_flow_control()</span></tt></a></p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.Serial.rtsToggle">
+<tt class="descname">rtsToggle</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.rtsToggle" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Platform:</th><td class="field-body">Windows</td>
+</tr>
+</tbody>
+</table>
+<p>Attribute to configure RTS toggle control setting. When enabled and
+supported by OS, RTS will be active when data is available and inactive
+if no data is available.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.6.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 3.0: </span>(removed, see <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.rs485_mode" title="serial.Serial.rs485_mode"><tt class="xref py py-attr docutils literal"><span class="pre">rs485_mode</span></tt></a> instead)</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<p>Implementation detail: some attributes and functions are provided by the
+class <tt class="xref py py-class docutils literal"><span class="pre">SerialBase</span></tt> and some by the platform specific class and
+others by the base class mentioned above.</p>
+</div>
+<div class="section" id="rs485-support">
+<h3>RS485 support<a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#rs485-support" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial" title="serial.Serial"><tt class="xref py py-class docutils literal"><span class="pre">Serial</span></tt></a> class has a <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.rs485_mode" title="serial.Serial.rs485_mode"><tt class="xref py py-attr docutils literal"><span class="pre">Serial.rs485_mode</span></tt></a> attribute which allows to
+enable RS485 specific support on some platforms. Currently Windows and Linux
+(only a small number of devices) are supported.</p>
+<p><a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.rs485_mode" title="serial.Serial.rs485_mode"><tt class="xref py py-attr docutils literal"><span class="pre">Serial.rs485_mode</span></tt></a> needs to be set to an instance of
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rs485.RS485Settings" title="serial.rs485.RS485Settings"><tt class="xref py py-class docutils literal"><span class="pre">rs485.RS485Settings</span></tt></a> to enable or to <tt class="docutils literal"><span class="pre">None</span></tt> to disable this feature.</p>
+<p>Usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ser</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">Serial</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">ser</span><span class="o">.</span><span class="n">rs485_mode</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">rs485</span><span class="o">.</span><span class="n">RS485Settings</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">ser</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">b</span><span class="s">'hello'</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>There is a subclass <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rs485.RS485" title="serial.rs485.RS485"><tt class="xref py py-class docutils literal"><span class="pre">rs485.RS485</span></tt></a> available to emulate the RS485 support
+on regular serial ports.</p>
+<dl class="class">
+<dt id="serial.rs485.RS485Settings">
+<em class="property">class </em><tt class="descclassname">rs485.</tt><tt class="descname">RS485Settings</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rs485.RS485Settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class that holds RS485 specific settings which are supported on
+some platforms.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+<dl class="method">
+<dt>
+<tt class="descname">__init__(rts_level_for_tx=True, rts_level_for_rx=False, loopback=False, delay_before_tx=None, delay_before_rx=None):</tt></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>rts_level_for_tx</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – RTS level for transmission</li>
+<li><strong>rts_level_for_rx</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – RTS level for reception</li>
+<li><strong>loopback</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – When set to <tt class="docutils literal"><span class="pre">True</span></tt> transmitted data is also received.</li>
+<li><strong>delay_before_tx</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) – Delay after setting RTS but before transmission starts</li>
+<li><strong>delay_before_rx</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) – Delay after transmission ends and resetting RTS</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.rs485.RS485Settings.rts_level_for_tx">
+<tt class="descname">rts_level_for_tx</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rs485.RS485Settings.rts_level_for_tx" title="Permalink to this definition">¶</a></dt>
+<dd><p>RTS level for transmission.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.rs485.RS485Settings.rts_level_for_rx">
+<tt class="descname">rts_level_for_rx</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rs485.RS485Settings.rts_level_for_rx" title="Permalink to this definition">¶</a></dt>
+<dd><p>RTS level for reception.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.rs485.RS485Settings.loopback">
+<tt class="descname">loopback</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rs485.RS485Settings.loopback" title="Permalink to this definition">¶</a></dt>
+<dd><p>When set to <tt class="docutils literal"><span class="pre">True</span></tt> transmitted data is also received.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.rs485.RS485Settings.delay_before_tx">
+<tt class="descname">delay_before_tx</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rs485.RS485Settings.delay_before_tx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delay after setting RTS but before transmission starts (seconds as float).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.rs485.RS485Settings.delay_before_rx">
+<tt class="descname">delay_before_rx</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rs485.RS485Settings.delay_before_rx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delay after transmission ends and resetting RTS (seconds as float).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="serial.rs485.RS485">
+<em class="property">class </em><tt class="descclassname">rs485.</tt><tt class="descname">RS485</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rs485.RS485" title="Permalink to this definition">¶</a></dt>
+<dd><p>A subclass that replaces the <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial.write" title="serial.Serial.write"><tt class="xref py py-meth docutils literal"><span class="pre">Serial.write()</span></tt></a> method with one that toggles RTS
+according to the RS485 settings.</p>
+<p>Usage:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ser</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">rs485</span><span class="o">.</span><span class="n">RS485</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">ser</span><span class="o">.</span><span class="n">rs485_mode</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">rs485</span><span class="o">.</span><span class="n">RS485Settings</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">ser</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">b</span><span class="s">'hello'</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This may work unreliably on some serial ports (control signals not
+synchronized or delayed compared to data). Using delays may be unreliable
+(varying times, larger than expected) as the OS may not support very fine
+grained delays (no smaller than in the order of tens of milliseconds).</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Some implementations support this natively in the class
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial" title="serial.Serial"><tt class="xref py py-class docutils literal"><span class="pre">Serial</span></tt></a>. Better performance can be expected when the native version
+is used.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The loopback property is ignored by this implementation. The actual
+behavior depends on the used hardware.</p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="rfc-2217-network-ports">
+<h3><span class="target" id="index-0"></span><a class="rfc reference external" href="http://tools.ietf.org/html/rfc2217.html"><strong>RFC 2217</strong></a> Network ports<a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#rfc-2217-network-ports" title="Permalink to this headline">¶</a></h3>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This implementation is currently in an experimental state. Use
+at your own risk.</p>
+</div>
+<dl class="class">
+<dt id="serial.rfc2217.Serial">
+<em class="property">class </em><tt class="descclassname">rfc2217.</tt><tt class="descname">Serial</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rfc2217.Serial" title="Permalink to this definition">¶</a></dt>
+<dd><p>This implements a <span class="target" id="index-1"></span><a class="rfc reference external" href="http://tools.ietf.org/html/rfc2217.html"><strong>RFC 2217</strong></a> compatible client. Port names are <a class="reference internal" href="https://pythonhosted.org/pyserial/url_handlers.html#urls"><em>URL</em></a> in the form: <tt class="docutils literal"><span class="pre">rfc2217://&lt;host&gt;:&lt;port&gt;[?&lt;option&gt;[&amp;&lt;option&gt;]]</span></tt></p>
+<p>This class API is compatible to <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial" title="serial.Serial"><tt class="xref py py-class docutils literal"><span class="pre">Serial</span></tt></a> with a few exceptions:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">write_timeout</span></tt> is not implemented</li>
+<li>The current implementation starts a thread that keeps reading from the
+(internal) socket. The thread is managed automatically by the
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rfc2217.Serial" title="serial.rfc2217.Serial"><tt class="xref py py-class docutils literal"><span class="pre">rfc2217.Serial</span></tt></a> port object on <tt class="xref py py-meth docutils literal"><span class="pre">open()</span></tt>/<tt class="xref py py-meth docutils literal"><span class="pre">close()</span></tt>.
+However it may be a problem for user applications that like to use select
+instead of threads.</li>
+</ul>
+<p>Due to the nature of the network and protocol involved there are a few
+extra points to keep in mind:</p>
+<ul class="simple">
+<li>All operations have an additional latency time.</li>
+<li>Setting control lines (RTS/CTS) needs more time.</li>
+<li>Reading the status lines (DSR/DTR etc.) returns a cached value. When that
+cache is updated depends entirely on the server. The server itself may
+implement a polling at a certain rate and quick changes may be invisible.</li>
+<li>The network layer also has buffers. This means that <tt class="xref py py-meth docutils literal"><span class="pre">flush()</span></tt>,
+<tt class="xref py py-meth docutils literal"><span class="pre">reset_input_buffer()</span></tt> and <tt class="xref py py-meth docutils literal"><span class="pre">reset_output_buffer()</span></tt> may work with
+additional delay.  Likewise <tt class="xref py py-attr docutils literal"><span class="pre">in_waiting</span></tt> returns the size of the
+data arrived at the objects internal buffer and excludes any bytes in the
+network buffers or any server side buffer.</li>
+<li>Closing and immediately reopening the same port may fail due to time
+needed by the server to get ready again.</li>
+</ul>
+<p>Not implemented yet / Possible problems with the implementation:</p>
+<ul class="simple">
+<li><span class="target" id="index-2"></span><a class="rfc reference external" href="http://tools.ietf.org/html/rfc2217.html"><strong>RFC 2217</strong></a> flow control between client and server (objects internal
+buffer may eat all your memory when never read).</li>
+<li>No authentication support (servers may not prompt for a password etc.)</li>
+<li>No encryption.</li>
+</ul>
+<p>Due to lack of authentication and encryption it is not suitable to use this
+client for connections across the internet and should only be used in
+controlled environments.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.5.</span></p>
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="serial.rfc2217.PortManager">
+<em class="property">class </em><tt class="descclassname">rfc2217.</tt><tt class="descname">PortManager</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rfc2217.PortManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class provides helper functions for implementing <span class="target" id="index-3"></span><a class="rfc reference external" href="http://tools.ietf.org/html/rfc2217.html"><strong>RFC 2217</strong></a>
+compatible servers.</p>
+<p>Basically, it implements everything needed for the <span class="target" id="index-4"></span><a class="rfc reference external" href="http://tools.ietf.org/html/rfc2217.html"><strong>RFC 2217</strong></a> protocol.
+It just does not open sockets and read/write to serial ports (though it
+changes other port settings). The user of this class must take care of the
+data transmission itself. The reason for that is, that this way, this class
+supports all programming models such as threads and select.</p>
+<p>Usage examples can be found in the examples where two TCP/IP - serial
+converters are shown, one using threads (the single port server) and an
+other using select (the multi port server).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Each new client connection must create a new instance as this
+object (and the <span class="target" id="index-5"></span><a class="rfc reference external" href="http://tools.ietf.org/html/rfc2217.html"><strong>RFC 2217</strong></a> protocol) has internal state.</p>
+</div>
+<dl class="method">
+<dt id="serial.rfc2217.PortManager.__init__">
+<tt class="descname">__init__</tt><big>(</big><em>serial_port</em>, <em>connection</em>, <em>debug_output=False</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rfc2217.PortManager.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>serial_port</strong> – a <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial" title="serial.Serial"><tt class="xref py py-class docutils literal"><span class="pre">Serial</span></tt></a> instance that is managed.</li>
+<li><strong>connection</strong> – an object implementing <tt class="xref py py-meth docutils literal"><span class="pre">write()</span></tt>, used to write
+to the network.</li>
+<li><strong>debug_output</strong> – enables debug messages: a <a class="reference external" href="http://docs.python.org/library/logging.html#logging.Logger" title="(in Python v2.7)"><tt class="xref py py-class docutils literal"><span class="pre">logging.Logger</span></tt></a>
+instance or None.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Initializes the Manager and starts negotiating with client in Telnet
+and <span class="target" id="index-6"></span><a class="rfc reference external" href="http://tools.ietf.org/html/rfc2217.html"><strong>RFC 2217</strong></a> protocol. The negotiation starts immediately so that
+the class should be instantiated in the moment the client connects.</p>
+<p>The <em>serial_port</em> can be controlled by <span class="target" id="index-7"></span><a class="rfc reference external" href="http://tools.ietf.org/html/rfc2217.html"><strong>RFC 2217</strong></a> commands. This
+object will modify the port settings (baud rate etc.) and control lines
+(RTS/DTR) send BREAK etc. when the corresponding commands are found by
+the <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rfc2217.PortManager.filter" title="serial.rfc2217.PortManager.filter"><tt class="xref py py-meth docutils literal"><span class="pre">filter()</span></tt></a> method.</p>
+<p>The <em>connection</em> object must implement a <tt class="xref py py-meth docutils literal"><span class="pre">write()</span></tt> function.
+This function must ensure that <em>data</em> is written at once (no user data
+mixed in, i.e. it must be thread-safe). All data must be sent in its
+raw form (<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rfc2217.PortManager.escape" title="serial.rfc2217.PortManager.escape"><tt class="xref py py-meth docutils literal"><span class="pre">escape()</span></tt></a> must not be used) as it is used to send Telnet
+and <span class="target" id="index-8"></span><a class="rfc reference external" href="http://tools.ietf.org/html/rfc2217.html"><strong>RFC 2217</strong></a> control commands.</p>
+<p>For diagnostics of the connection or the implementation, <em>debug_output</em>
+can be set to an instance of a <a class="reference external" href="http://docs.python.org/library/logging.html#logging.Logger" title="(in Python v2.7)"><tt class="xref py py-class docutils literal"><span class="pre">logging.Logger</span></tt></a> (e.g.
+<tt class="docutils literal"><span class="pre">logging.getLogger('rfc2217.server')</span></tt>). The caller should configure
+the logger using <tt class="docutils literal"><span class="pre">setLevel</span></tt> for the desired detail level of the logs.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.rfc2217.PortManager.escape">
+<tt class="descname">escape</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rfc2217.PortManager.escape" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – data to be sent over the network.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">data, escaped for Telnet/<span class="target" id="index-9"></span><a class="rfc reference external" href="http://tools.ietf.org/html/rfc2217.html"><strong>RFC 2217</strong></a></td>
+</tr>
+</tbody>
+</table>
+<p>A generator that escapes all data to be compatible with <span class="target" id="index-10"></span><a class="rfc reference external" href="http://tools.ietf.org/html/rfc2217.html"><strong>RFC 2217</strong></a>.
+Implementors of servers should use this function to process all data
+sent over the network.</p>
+<p>The function returns a generator which can be used in <tt class="docutils literal"><span class="pre">for</span></tt> loops.
+It can be converted to bytes using <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.to_bytes" title="serial.to_bytes"><tt class="xref py py-func docutils literal"><span class="pre">serial.to_bytes()</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.rfc2217.PortManager.filter">
+<tt class="descname">filter</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rfc2217.PortManager.filter" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – data read from the network, including Telnet and
+<span class="target" id="index-11"></span><a class="rfc reference external" href="http://tools.ietf.org/html/rfc2217.html"><strong>RFC 2217</strong></a> controls.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">data, free from Telnet and <span class="target" id="index-12"></span><a class="rfc reference external" href="http://tools.ietf.org/html/rfc2217.html"><strong>RFC 2217</strong></a> controls.</td>
+</tr>
+</tbody>
+</table>
+<p>A generator that filters and processes all data related to <span class="target" id="index-13"></span><a class="rfc reference external" href="http://tools.ietf.org/html/rfc2217.html"><strong>RFC 2217</strong></a>.
+Implementors of servers should use this function to process all data
+received from the network.</p>
+<p>The function returns a generator which can be used in <tt class="docutils literal"><span class="pre">for</span></tt> loops.
+It can be converted to bytes using <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.to_bytes" title="serial.to_bytes"><tt class="xref py py-func docutils literal"><span class="pre">serial.to_bytes()</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.rfc2217.PortManager.check_modem_lines">
+<tt class="descname">check_modem_lines</tt><big>(</big><em>force_notification=False</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.rfc2217.PortManager.check_modem_lines" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>force_notification</strong> – Set to false. Parameter is for internal use.</td>
+</tr>
+</tbody>
+</table>
+<p>This function needs to be called periodically (e.g. every second) when
+the server wants to send NOTIFY_MODEMSTATE messages. This is required
+to support the client for reading CTS/DSR/RI/CD status lines.</p>
+<p>The function reads the status line and issues the notifications
+automatically.</p>
+</dd></dl>
+
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.5.</span></p>
+</div>
+</dd></dl>
+
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><span class="target" id="index-14"></span><a class="rfc reference external" href="http://tools.ietf.org/html/rfc2217.html"><strong>RFC 2217</strong></a> - Telnet Com Port Control Option</p>
+</div>
+</div>
+</div>
+<div class="section" id="exceptions">
+<h2>Exceptions<a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#exceptions" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="serial.SerialException">
+<em class="property">exception </em><tt class="descclassname">serial.</tt><tt class="descname">SerialException</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.SerialException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for serial port exceptions.</p>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 2.5: </span>Now derives from <tt class="xref py py-exc docutils literal"><span class="pre">IOError</span></tt> instead of <tt class="xref py py-exc docutils literal"><span class="pre">Exception</span></tt></p>
+</div>
+</dd></dl>
+
+<dl class="exception">
+<dt id="serial.SerialTimeoutException">
+<em class="property">exception </em><tt class="descclassname">serial.</tt><tt class="descname">SerialTimeoutException</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.SerialTimeoutException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception that is raised on write timeouts.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="constants">
+<h2>Constants<a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#constants" title="Permalink to this headline">¶</a></h2>
+<p><em>Parity</em></p>
+<dl class="data">
+<dt id="serial.PARITY_NONE">
+<tt class="descclassname">serial.</tt><tt class="descname">PARITY_NONE</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.PARITY_NONE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="serial.PARITY_EVEN">
+<tt class="descclassname">serial.</tt><tt class="descname">PARITY_EVEN</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.PARITY_EVEN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="serial.PARITY_ODD">
+<tt class="descclassname">serial.</tt><tt class="descname">PARITY_ODD</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.PARITY_ODD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="serial.PARITY_MARK">
+<tt class="descclassname">serial.</tt><tt class="descname">PARITY_MARK</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.PARITY_MARK" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="serial.PARITY_SPACE">
+<tt class="descclassname">serial.</tt><tt class="descname">PARITY_SPACE</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.PARITY_SPACE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p><em>Stop bits</em></p>
+<dl class="data">
+<dt id="serial.STOPBITS_ONE">
+<tt class="descclassname">serial.</tt><tt class="descname">STOPBITS_ONE</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.STOPBITS_ONE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="serial.STOPBITS_ONE_POINT_FIVE">
+<tt class="descclassname">serial.</tt><tt class="descname">STOPBITS_ONE_POINT_FIVE</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.STOPBITS_ONE_POINT_FIVE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="serial.STOPBITS_TWO">
+<tt class="descclassname">serial.</tt><tt class="descname">STOPBITS_TWO</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.STOPBITS_TWO" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Note that 1.5 stop bits are not supported on POSIX. It will fall back to 2 stop
+bits.</p>
+<p><em>Byte size</em></p>
+<dl class="data">
+<dt id="serial.FIVEBITS">
+<tt class="descclassname">serial.</tt><tt class="descname">FIVEBITS</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.FIVEBITS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="serial.SIXBITS">
+<tt class="descclassname">serial.</tt><tt class="descname">SIXBITS</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.SIXBITS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="serial.SEVENBITS">
+<tt class="descclassname">serial.</tt><tt class="descname">SEVENBITS</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.SEVENBITS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="serial.EIGHTBITS">
+<tt class="descclassname">serial.</tt><tt class="descname">EIGHTBITS</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.EIGHTBITS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p><em>Others</em></p>
+<p>Default control characters (instances of <tt class="xref py py-class docutils literal"><span class="pre">bytes</span></tt> for Python 3.0+) for
+software flow control:</p>
+<dl class="data">
+<dt id="serial.XON">
+<tt class="descclassname">serial.</tt><tt class="descname">XON</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.XON" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="data">
+<dt id="serial.XOFF">
+<tt class="descclassname">serial.</tt><tt class="descname">XOFF</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.XOFF" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Module version:</p>
+<dl class="data">
+<dt id="serial.VERSION">
+<tt class="descclassname">serial.</tt><tt class="descname">VERSION</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.VERSION" title="Permalink to this definition">¶</a></dt>
+<dd><p>A string indicating the pySerial version, such as <tt class="docutils literal"><span class="pre">3.0</span></tt>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.3.</span></p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-functions-and-attributes">
+<h2>Module functions and attributes<a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#module-functions-and-attributes" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="serial.device">
+<tt class="descclassname">serial.</tt><tt class="descname">device</tt><big>(</big><em>number</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.device" title="Permalink to this definition">¶</a></dt>
+<dd><div class="versionchanged">
+<p><span class="versionmodified">Changed in version 3.0: </span>removed, use <tt class="docutils literal"><span class="pre">serial.tools.list_ports</span></tt> instead</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="serial.serial_for_url">
+<tt class="descclassname">serial.</tt><tt class="descname">serial_for_url</tt><big>(</big><em>url</em>, <em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.serial_for_url" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>url</strong> – Device name, number or <a class="reference internal" href="https://pythonhosted.org/pyserial/url_handlers.html#urls"><em>URL</em></a></li>
+<li><strong>do_not_open</strong> – When set to true, the serial port is not opened.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">an instance of <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial" title="serial.Serial"><tt class="xref py py-class docutils literal"><span class="pre">Serial</span></tt></a> or a compatible object.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Get a native or a <span class="target" id="index-15"></span><a class="rfc reference external" href="http://tools.ietf.org/html/rfc2217.html"><strong>RFC 2217</strong></a> implementation of the Serial class, depending
+on port/url. This factory function is useful when an application wants
+to support both, local ports and remote ports. There is also support
+for other types, see <a class="reference internal" href="https://pythonhosted.org/pyserial/url_handlers.html#urls"><em>URL</em></a> section.</p>
+<p>The port is not opened when a keyword parameter called <em>do_not_open</em> is
+given and true, by default it is opened.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.5.</span></p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="serial.protocol_handler_packages">
+<tt class="descclassname">serial.</tt><tt class="descname">protocol_handler_packages</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.protocol_handler_packages" title="Permalink to this definition">¶</a></dt>
+<dd><p>This attribute is a list of package names (strings) that is searched for
+protocol handlers.</p>
+<p>e.g. we want to support a URL <tt class="docutils literal"><span class="pre">foobar://</span></tt>. A module
+<tt class="docutils literal"><span class="pre">my_handlers.protocol_foobar</span></tt> is provided by the user:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">serial</span><span class="o">.</span><span class="n">protocol_handler_packages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">"my_handlers"</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">serial_for_url</span><span class="p">(</span><span class="s">"foobar://"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For an URL starting with <tt class="docutils literal"><span class="pre">XY://</span></tt> is the function <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.serial_for_url" title="serial.serial_for_url"><tt class="xref py py-func docutils literal"><span class="pre">serial_for_url()</span></tt></a>
+attempts to import <tt class="docutils literal"><span class="pre">PACKAGE.protocol_XY</span></tt> with each candidate for
+<tt class="docutils literal"><span class="pre">PACKAGE</span></tt> from this list.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.6.</span></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="serial.to_bytes">
+<tt class="descclassname">serial.</tt><tt class="descname">to_bytes</tt><big>(</big><em>sequence</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.to_bytes" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sequence</strong> – bytes, bytearray or memoryview</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">an instance of <tt class="docutils literal"><span class="pre">bytes</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Convert a sequence to a <tt class="docutils literal"><span class="pre">bytes</span></tt> type. This is used to write code that is
+compatible to Python 2.x and 3.x.</p>
+<p>In Python versions prior 3.x, <tt class="docutils literal"><span class="pre">bytes</span></tt> is a subclass of str. They convert
+<tt class="docutils literal"><span class="pre">str([17])</span></tt> to <tt class="docutils literal"><span class="pre">'[17]'</span></tt> instead of <tt class="docutils literal"><span class="pre">'\x11'</span></tt> so a simple
+<tt class="docutils literal"><span class="pre">bytes(sequence)</span></tt> doesn’t work for all versions of Python.</p>
+<p>This function is used internally and in the unit tests.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.5.</span></p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="serial.iterbytes">
+<tt class="descclassname">serial.</tt><tt class="descname">iterbytes</tt><big>(</big><em>sequence</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.iterbytes" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sequence</strong> – bytes, bytearray or memoryview</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a generator that yields bytes</td>
+</tr>
+</tbody>
+</table>
+<p>Some versions of Python (3.x) would return integers instead of bytes when
+looping over an instance of <tt class="docutils literal"><span class="pre">bytes</span></tt>.  This helper function ensures that
+bytes are returned.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-serial.threaded">
+<span id="threading"></span><h2>Threading<a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#module-serial.threaded" title="Permalink to this headline">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This implementation is currently in an experimental state. Use
+at your own risk.</p>
+</div>
+<p>This module provides classes to simplify working with threads and protocols.</p>
+<dl class="class">
+<dt id="serial.threaded.Protocol">
+<em class="property">class </em><tt class="descclassname">serial.threaded.</tt><tt class="descname">Protocol</tt><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.Protocol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Protocol as used by the <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.ReaderThread" title="serial.threaded.ReaderThread"><tt class="xref py py-class docutils literal"><span class="pre">ReaderThread</span></tt></a>. This base class provides empty
+implementations of all methods.</p>
+<dl class="method">
+<dt id="serial.threaded.Protocol.connection_made">
+<tt class="descname">connection_made</tt><big>(</big><em>transport</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.Protocol.connection_made" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>transport</strong> – instance used to write to serial port.</td>
+</tr>
+</tbody>
+</table>
+<p>Called when reader thread is started.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.threaded.Protocol.data_received">
+<tt class="descname">data_received</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.Protocol.data_received" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>bytes</em>) – received bytes</td>
+</tr>
+</tbody>
+</table>
+<p>Called with snippets received from the serial port.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.threaded.Protocol.connection_lost">
+<tt class="descname">connection_lost</tt><big>(</big><em>exc</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.Protocol.connection_lost" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>exc</strong> – Exception if connection was terminated by error else <tt class="docutils literal"><span class="pre">None</span></tt></td>
+</tr>
+</tbody>
+</table>
+<p>Called when the serial port is closed or the reader loop terminated
+otherwise.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="serial.threaded.Packetizer">
+<em class="property">class </em><tt class="descclassname">serial.threaded.</tt><tt class="descname">Packetizer</tt><big>(</big><em>Protocol</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.Packetizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read binary packets from serial port. Packets are expected to be terminated
+with a <tt class="docutils literal"><span class="pre">TERMINATOR</span></tt> byte (null byte by default).</p>
+<p>The class also keeps track of the transport.</p>
+<dl class="attribute">
+<dt>
+<tt class="descname">TERMINATOR = b'\0'</tt></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="serial.threaded.Packetizer.__init__">
+<tt class="descname">__init__</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.Packetizer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="serial.threaded.Packetizer.connection_made">
+<tt class="descname">connection_made</tt><big>(</big><em>transport</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.Packetizer.connection_made" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores transport.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.threaded.Packetizer.connection_lost">
+<tt class="descname">connection_lost</tt><big>(</big><em>exc</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.Packetizer.connection_lost" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forgets transport.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.threaded.Packetizer.data_received">
+<tt class="descname">data_received</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.Packetizer.data_received" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>bytes</em>) – partial received data</td>
+</tr>
+</tbody>
+</table>
+<p>Buffer received data and search for <tt class="xref py py-attr docutils literal"><span class="pre">TERMINATOR</span></tt>, when found,
+call <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.Packetizer.handle_packet" title="serial.threaded.Packetizer.handle_packet"><tt class="xref py py-meth docutils literal"><span class="pre">handle_packet()</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.threaded.Packetizer.handle_packet">
+<tt class="descname">handle_packet</tt><big>(</big><em>packet</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.Packetizer.handle_packet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process packets - to be overridden by subclassing.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="serial.threaded.LineReader">
+<em class="property">class </em><tt class="descclassname">serial.threaded.</tt><tt class="descname">LineReader</tt><big>(</big><em>Packetizer</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.LineReader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read and write (Unicode) lines from/to serial port.
+The encoding is applied.</p>
+<dl class="attribute">
+<dt>
+<tt class="descname">TERMINATOR = b'\r\n'</tt></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<tt class="descname">ENCODING = 'utf-8'</tt></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt>
+<tt class="descname">UNICODE_HANDLING = 'replace'</tt></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="serial.threaded.LineReader.handle_packet">
+<tt class="descname">handle_packet</tt><big>(</big><em>packet</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.LineReader.handle_packet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="serial.threaded.LineReader.handle_line">
+<tt class="descname">handle_line</tt><big>(</big><em>line</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.LineReader.handle_line" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>line</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – Unicode string with one line (excluding line terminator)</td>
+</tr>
+</tbody>
+</table>
+<p>Process one line - to be overridden by subclassing.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.threaded.LineReader.write_line">
+<tt class="descname">write_line</tt><big>(</big><em>text</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.LineReader.write_line" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>text</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) – Unicode string with one line (excluding line terminator)</td>
+</tr>
+</tbody>
+</table>
+<p>Write <em>text</em> to the transport. <em>text</em> is expected to be a Unicode
+string and the encoding is applied before sending and also the
+<tt class="xref py py-attr docutils literal"><span class="pre">TERMINATOR</span></tt> (new line) is appended.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="serial.threaded.ReaderThread">
+<em class="property">class </em><tt class="descclassname">serial.threaded.</tt><tt class="descname">ReaderThread</tt><big>(</big><em>threading.Thread</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.ReaderThread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Implement a serial port read loop and dispatch to a Protocol instance (like
+the <tt class="xref py py-class docutils literal"><span class="pre">asyncio.Protocol</span></tt>) but do it with threads.</p>
+<p>Calls to <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.ReaderThread.close" title="serial.threaded.ReaderThread.close"><tt class="xref py py-meth docutils literal"><span class="pre">close()</span></tt></a> will close the serial port but it is also possible
+to just <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.ReaderThread.stop" title="serial.threaded.ReaderThread.stop"><tt class="xref py py-meth docutils literal"><span class="pre">stop()</span></tt></a> this thread and continue to use the serial port
+instance otherwise.</p>
+<dl class="method">
+<dt id="serial.threaded.ReaderThread.__init__">
+<tt class="descname">__init__</tt><big>(</big><em>serial_instance</em>, <em>protocol_factory</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.ReaderThread.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>serial_instance</strong> – serial port instance (opened) to be used.</li>
+<li><strong>protocol_factory</strong> – a callable that returns a Protocol instance</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Initialize thread.</p>
+<p>Note that the <tt class="docutils literal"><span class="pre">serial_instance</span></tt> ‘s timeout is set to one second!
+Other settings are not changed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.threaded.ReaderThread.stop">
+<tt class="descname">stop</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.ReaderThread.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop the reader thread.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.threaded.ReaderThread.run">
+<tt class="descname">run</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.ReaderThread.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>The actual reader loop driven by the thread. It calls
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.Protocol.connection_made" title="serial.threaded.Protocol.connection_made"><tt class="xref py py-meth docutils literal"><span class="pre">Protocol.connection_made()</span></tt></a>, reads from the serial port calling
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.Protocol.data_received" title="serial.threaded.Protocol.data_received"><tt class="xref py py-meth docutils literal"><span class="pre">Protocol.data_received()</span></tt></a> and finally calls <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.Protocol.connection_lost" title="serial.threaded.Protocol.connection_lost"><tt class="xref py py-meth docutils literal"><span class="pre">Protocol.connection_lost()</span></tt></a>
+when <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.ReaderThread.close" title="serial.threaded.ReaderThread.close"><tt class="xref py py-meth docutils literal"><span class="pre">close()</span></tt></a> is called or an error occurs.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.threaded.ReaderThread.write">
+<tt class="descname">write</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.ReaderThread.write" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>bytes</em>) – data to write</td>
+</tr>
+</tbody>
+</table>
+<p>Thread safe writing (uses lock).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.threaded.ReaderThread.close">
+<tt class="descname">close</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.ReaderThread.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close the serial port and exit reader thread, calls <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.ReaderThread.stop" title="serial.threaded.ReaderThread.stop"><tt class="xref py py-meth docutils literal"><span class="pre">stop()</span></tt></a> (uses lock).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.threaded.ReaderThread.connect">
+<tt class="descname">connect</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.ReaderThread.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait until connection is set up and return the transport and protocol
+instances.</p>
+</dd></dl>
+
+<p>This class can be used as context manager, in this case it starts
+the thread and connects automatically. The serial port is closed
+when the context is left.</p>
+<dl class="method">
+<dt id="serial.threaded.ReaderThread.__enter__">
+<tt class="descname">__enter__</tt><big>(</big><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.ReaderThread.__enter__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">protocol</td>
+</tr>
+</tbody>
+</table>
+<p>Connect and return protocol instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serial.threaded.ReaderThread.__exit__">
+<tt class="descname">__exit__</tt><big>(</big><em>exc_type</em>, <em>exc_val</em>, <em>exc_tb</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.threaded.ReaderThread.__exit__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes serial port.</p>
+</dd></dl>
+
+</dd></dl>
+
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">PrintLines</span><span class="p">(</span><span class="n">LineReader</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">connection_made</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transport</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">PrintLines</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">connection_made</span><span class="p">(</span><span class="n">transport</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'port opened</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">write_line</span><span class="p">(</span><span class="s">'hello world'</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">handle_line</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'line received: {}</span><span class="se">\n</span><span class="s">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">repr</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span>
+
+    <span class="k">def</span> <span class="nf">connection_lost</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">exc</span><span class="p">:</span>
+            <span class="n">traceback</span><span class="o">.</span><span class="n">print_exc</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'port closed</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+<span class="n">ser</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">serial_for_url</span><span class="p">(</span><span class="s">'loop://'</span><span class="p">,</span> <span class="n">baudrate</span><span class="o">=</span><span class="mi">115200</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">ReaderThread</span><span class="p">(</span><span class="n">ser</span><span class="p">,</span> <span class="n">PrintLines</span><span class="p">)</span> <span class="k">as</span> <span class="n">protocol</span><span class="p">:</span>
+    <span class="n">protocol</span><span class="o">.</span><span class="n">write_line</span><span class="p">(</span><span class="s">'hello'</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="module-serial.aio">
+<span id="asyncio"></span><h2>asyncio<a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#module-serial.aio" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This implementation is currently in an experimental state. Use
+at your own risk.</p>
+</div>
+<p>Experimental asyncio support is available for Python 3.4 and newer. The module
+<a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#module-serial.aio" title="serial.aio"><tt class="xref py py-mod docutils literal"><span class="pre">serial.aio</span></tt></a> provides a <tt class="xref py py-class docutils literal"><span class="pre">asyncio.Transport</span></tt>:
+<tt class="docutils literal"><span class="pre">SerialTransport</span></tt>.</p>
+<p>A factory function (<cite>asyncio.coroutine</cite>) is provided:</p>
+<dl class="function">
+<dt id="serial.aio.create_serial_connection">
+<tt class="descclassname">serial.aio.</tt><tt class="descname">create_serial_connection</tt><big>(</big><em>loop</em>, <em>protocol_factory</em>, <em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.aio.create_serial_connection" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<colgroup><col class="field-name">
+<col class="field-body">
+</colgroup><tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>loop</strong> – The event handler</li>
+<li><strong>protocol_factory</strong> – Factory function for a <tt class="xref py py-class docutils literal"><span class="pre">asyncio.Protocol</span></tt></li>
+<li><strong>args</strong> – Passed to the <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial" title="serial.Serial"><tt class="xref py py-class docutils literal"><span class="pre">serial.Serial</span></tt></a> init function</li>
+<li><strong>kwargs</strong> – Passed to the <a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#serial.Serial" title="serial.Serial"><tt class="xref py py-class docutils literal"><span class="pre">serial.Serial</span></tt></a> init function</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Platform:</th><td class="field-body"><p class="first last">Posix</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Get a connection making coroutine.</p>
+</dd></dl>
+
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">class</span> <span class="nc">Output</span><span class="p">(</span><span class="n">asyncio</span><span class="o">.</span><span class="n">Protocol</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">connection_made</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">transport</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">transport</span> <span class="o">=</span> <span class="n">transport</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'port opened'</span><span class="p">,</span> <span class="n">transport</span><span class="p">)</span>
+        <span class="n">transport</span><span class="o">.</span><span class="n">serial</span><span class="o">.</span><span class="n">rts</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="n">transport</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">b</span><span class="s">'hello world</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">data_received</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'data received'</span><span class="p">,</span> <span class="nb">repr</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">transport</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">connection_lost</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'port closed'</span><span class="p">)</span>
+        <span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+
+<span class="n">loop</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span>
+<span class="n">coro</span> <span class="o">=</span> <span class="n">serial</span><span class="o">.</span><span class="n">aio</span><span class="o">.</span><span class="n">create_serial_connection</span><span class="p">(</span><span class="n">loop</span><span class="p">,</span> <span class="n">Output</span><span class="p">,</span> <span class="s">'/dev/ttyUSB0'</span><span class="p">,</span> <span class="n">baudrate</span><span class="o">=</span><span class="mi">115200</span><span class="p">)</span>
+<span class="n">loop</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">coro</span><span class="p">)</span>
+<span class="n">loop</span><span class="o">.</span><span class="n">run_forever</span><span class="p">()</span>
+<span class="n">loop</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="https://pythonhosted.org/pyserial/index.html">
+              <img class="logo" src="./pySerial API — pySerial 3.0 documentation_files/pyserial.png" alt="Logo">
+            </a></p>
+  <h3><a href="https://pythonhosted.org/pyserial/index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#">pySerial API</a><ul>
+<li><a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#classes">Classes</a><ul>
+<li><a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#native-ports">Native ports</a></li>
+<li><a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#rs485-support">RS485 support</a></li>
+<li><a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#rfc-2217-network-ports"><strong>RFC 2217</strong> Network ports</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#exceptions">Exceptions</a></li>
+<li><a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#constants">Constants</a></li>
+<li><a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#module-functions-and-attributes">Module functions and attributes</a></li>
+<li><a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#module-serial.threaded">Threading</a></li>
+<li><a class="reference internal" href="https://pythonhosted.org/pyserial/pyserial_api.html#module-serial.aio">asyncio</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="https://pythonhosted.org/pyserial/shortintro.html" title="previous chapter">Short introduction</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="https://pythonhosted.org/pyserial/tools.html" title="next chapter">Tools</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="https://pythonhosted.org/pyserial/_sources/pyserial_api.txt" rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="">
+  <h3>Quick search</h3>
+    <form class="search" action="https://pythonhosted.org/pyserial/search.html" method="get">
+      <input type="text" name="q">
+      <input type="submit" value="Go">
+      <input type="hidden" name="check_keywords" value="yes">
+      <input type="hidden" name="area" value="default">
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="https://pythonhosted.org/pyserial/genindex.html" title="General Index">index</a></li>
+        <li class="right">
+          <a href="https://pythonhosted.org/pyserial/py-modindex.html" title="Python Module Index">modules</a> |</li>
+        <li class="right">
+          <a href="https://pythonhosted.org/pyserial/tools.html" title="Tools">next</a> |</li>
+        <li class="right">
+          <a href="https://pythonhosted.org/pyserial/shortintro.html" title="Short introduction">previous</a> |</li>
+        <li><a href="https://pythonhosted.org/pyserial/index.html">pySerial 3.0 documentation</a> »</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        © Copyright 2001-2015, Chris Liechti.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  
+<div></div><div class="corom-element" style="position: absolute; top: 0px; left: 0px; right: 0px; height: 0px; margin: 0px; z-index: 2147483647; pointer-events: none; border: none;"></div></body></html>
