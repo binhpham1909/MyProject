@@ -1,0 +1,7 @@
+Added Pin To Net: NetName=N Pin=DB1-2
+Added Pin To Net: NetName=220+ Pin=DB1-1
+Added Net: Name=220+
+Added Pin To Net: NetName=220- Pin=DB1-4
+Added Net: Name=220-
+Added Pin To Net: NetName=L Pin=DB1-3
+Added Net: Name=L

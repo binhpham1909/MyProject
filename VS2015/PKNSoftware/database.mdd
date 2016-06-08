@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<DBMODEL Version="1.0" TYPE="MySQL">
+<MODELSETTINGS MDDVERSION="1.9.6 (build 438)" ModelProject="" ModelName="database" ModelCompany="" ModelAuthor="" ModelVersion="" ModelVersionAI="0" ModelCreated="2016-05-19 22:35:32" MaintainModelUpdated="1" ModelCopyright="\169" ModelUpdated="2016-05-19 23:05:00" Description="" Annotation="" ZoomFac="100.00" XPos="0" YPos="0" PrintLink="" WorkspaceColor="16777215" SnapGrid="1" DisplaySnap="1" SnapSize="10" ShowPages="1" ShowTableColumns="1" ShowTableIndeces="1" ShowColumnTypes="1" ShowDomains="0" ShowIndexInd="0" ShowNullInd="0" ShowForeignKeys="1" EntityFillColor="16777215" EntityLineColor="8388608" EntityFontColor="0" ShowTableColumnComment="0" ShowTableTriggers="1" ShowTableComment="0" ShowRefName="1" ShowCardinality="0" ShowJoin="0" Notation="0" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" DefaultDelete="3" DefaultUpdate="3" DefaultTableType="0" DefaultDataType="3" CreateFKRef="0" FKPrefix="" QueryDelimiter=";" DBQuoteCharacter="`" EncloseNames="1" HPageCount="5" VPageCount="5" SPFillColor="13499135" SPLineColor="8388608" SPFontColor="0" ViewFillColor="3329434" ViewLineColor="8388608" ViewFontColor="0" TrimSPBody="0" MinimapBackColor="16777215" MinimapShapesStyle="2" MinimapVisibleAreaStyle="2" />
+<GENERATIONSETTINGS TextCharCase="2" NameInComment="0" ModelCheck="1" ISQL="0" Delimiter="||" TypeInsteadOfEngine="0">
+  <DBGENSETTINGS DBCreate="1" BeginScript="0" Comment="0" Drop="0" EndScript="0" />
+  <FKGENSETTINGS CreateFK="1" GenerateInsideTables="1" /> + EOL  <SPGENSETTINGS BeginScript="0" Comment="0" Drop="0" EndScript="0" SPCreate="1" OrderStr="" />
+  <TABLEGENSETTINGS Annotation="0" BeginScript="0" Comment="1" CreateIndex="1" CreateOption="1" CreatePK="1" Drop="0" EndScript="0" TableCreate="1" TriggersCreate="1" TriggersDrop="0" OrderStr="pkn_user,pkn_chemicalName,pkn_chemical,pkn_chemicalMaterial,pkn_chemicalExport,pkn_chemicalInfo,pkn_chemicalImport,pkn_conditionStore,pkn_unit,pkn_manufactor,pkn_provider,pkn_materialCode,pkn_certificate" />
+  <VIEWGENSETTINGS BeginScript="0" Comment="0" Drop="0" EndScript="0" ViewCreate="1" OrderStr="" />
+  <EVENTGENSETTINGS BeginScript="0" Comment="0" Drop="0" EndScript="0" EventCreate="1" OrderStr="" />
+</GENERATIONSETTINGS>
+<DATABASE Name="pkn" CharacterSet="utf8" Collate="utf8_general_ci" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" />
+<STAMPS>
+</STAMPS>
+<DOMAINS>
+</DOMAINS>
+<METADATA>
+<ENTITIES>
+<ENTITY ID="1000" Name="pkn_user" XPos="1360" YPos="300" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" FillColor="16777215" LineColor="8388608" FontColor="0" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" >
+<COLUMNS>
+<COLUMN ID="1007" Name="userID" DomainID="-1" Pos="0" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+<COLUMN ID="1015" Name="userName" DomainID="-1" Pos="1" Datatype="14" Type="VARCHAR" Width="50" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+<COLUMN ID="1016" Name="userFullName" DomainID="-1" Pos="2" Datatype="14" Type="VARCHAR" Width="50" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+<COLUMN ID="1017" Name="userPassword" DomainID="-1" Pos="3" Datatype="14" Type="VARCHAR" Width="50" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1079" />
+<REFERENCE_BEGIN ID="1081" />
+</REFERENCES_BEGIN>
+<INDEXES>
+<INDEX ID="1008" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1007=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1001" Name="pkn_chemicalName" XPos="20" YPos="200" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" FillColor="16777215" LineColor="8388608" FontColor="0" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" >
+<COLUMNS>
+<COLUMN ID="1009" Name="chemicalNameID" DomainID="-1" Pos="0" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+<COLUMN ID="1014" Name="chemicalID" DomainID="-1" Pos="1" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="">
+</COLUMN>
+<COLUMN ID="1083" Name="chemicalNameDefault" DomainID="-1" Pos="2" Datatype="28" Type="BIT" Width="1" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+</COLUMNS>
+<REFERENCES_END>
+<REFERENCE_END ID="1013" />
+</REFERENCES_END>
+<INDEXES>
+<INDEX ID="1010" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1009=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1002" Name="pkn_chemical" XPos="260" YPos="270" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" FillColor="16777215" LineColor="8388608" FontColor="0" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" >
+<COLUMNS>
+<COLUMN ID="1011" Name="chemicalID" DomainID="-1" Pos="0" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1013" />
+<REFERENCE_BEGIN ID="1020" />
+<REFERENCE_BEGIN ID="1032" />
+</REFERENCES_BEGIN>
+<INDEXES>
+<INDEX ID="1012" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1011=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1003" Name="pkn_chemicalMaterial" XPos="640" YPos="220" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" FillColor="16777215" LineColor="8388608" FontColor="0" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" >
+<COLUMNS>
+<COLUMN ID="1018" Name="chemicalMaterialID" DomainID="-1" Pos="0" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+<COLUMN ID="1021" Name="chemicalID" DomainID="-1" Pos="1" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="">
+</COLUMN>
+<COLUMN ID="1044" Name="conditionStoreID" DomainID="-1" Pos="2" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="">
+</COLUMN>
+<COLUMN ID="1062" Name="providerID" DomainID="-1" Pos="4" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="">
+</COLUMN>
+<COLUMN ID="1068" Name="materialCodeID" DomainID="-1" Pos="5" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="">
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1024" />
+<REFERENCE_BEGIN ID="1028" />
+</REFERENCES_BEGIN>
+<REFERENCES_END>
+<REFERENCE_END ID="1020" />
+<REFERENCE_END ID="1043" />
+<REFERENCE_END ID="1058" />
+<REFERENCE_END ID="1067" />
+</REFERENCES_END>
+<INDEXES>
+<INDEX ID="1019" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1018=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1004" Name="pkn_chemicalExport" XPos="930" YPos="460" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" FillColor="16777215" LineColor="8388608" FontColor="0" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" >
+<COLUMNS>
+<COLUMN ID="1026" Name="chemicalExportID" DomainID="-1" Pos="0" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+<COLUMN ID="1029" Name="chemicalMaterialID" DomainID="-1" Pos="1" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="">
+</COLUMN>
+<COLUMN ID="1076" Name="chemicalExportWeight" DomainID="-1" Pos="2" Datatype="5" Type="FLOAT" Width="9" Prec="3" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+<COLUMN ID="1078" Name="unitID" DomainID="-1" Pos="3" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="">
+</COLUMN>
+<COLUMN ID="1082" Name="userExportID" DomainID="-1" Pos="4" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="">
+</COLUMN>
+</COLUMNS>
+<REFERENCES_END>
+<REFERENCE_END ID="1028" />
+<REFERENCE_END ID="1077" />
+<REFERENCE_END ID="1081" />
+</REFERENCES_END>
+<INDEXES>
+<INDEX ID="1027" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1026=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1005" Name="pkn_chemicalInfo" XPos="30" YPos="370" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" FillColor="16777215" LineColor="8388608" FontColor="0" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" >
+<COLUMNS>
+<COLUMN ID="1030" Name="chemicalInfoID" DomainID="-1" Pos="0" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+<COLUMN ID="1033" Name="chemicalID" DomainID="-1" Pos="1" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="">
+</COLUMN>
+</COLUMNS>
+<REFERENCES_END>
+<REFERENCE_END ID="1032" />
+</REFERENCES_END>
+<INDEXES>
+<INDEX ID="1031" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1030=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1006" Name="pkn_chemicalImport" XPos="930" YPos="110" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" FillColor="16777215" LineColor="8388608" FontColor="0" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" >
+<COLUMNS>
+<COLUMN ID="1022" Name="chemicalImportID" DomainID="-1" Pos="0" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+<COLUMN ID="1025" Name="chemicalMaterialID" DomainID="-1" Pos="1" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="">
+</COLUMN>
+<COLUMN ID="1072" Name="chemicalImportWeight" DomainID="-1" Pos="2" Datatype="5" Type="FLOAT" Width="9" Prec="3" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+<COLUMN ID="1075" Name="unitID" DomainID="-1" Pos="3" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="">
+</COLUMN>
+<COLUMN ID="1080" Name="userImportID" DomainID="-1" Pos="4" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="">
+</COLUMN>
+<COLUMN ID="1090" Name="certificateID" DomainID="-1" Pos="5" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="">
+</COLUMN>
+</COLUMNS>
+<REFERENCES_END>
+<REFERENCE_END ID="1024" />
+<REFERENCE_END ID="1074" />
+<REFERENCE_END ID="1079" />
+<REFERENCE_END ID="1089" />
+</REFERENCES_END>
+<INDEXES>
+<INDEX ID="1023" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1022=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1034" Name="pkn_conditionStore" XPos="260" YPos="370" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" FillColor="16777215" LineColor="8388608" FontColor="0" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" >
+<COLUMNS>
+<COLUMN ID="1038" Name="conditionStoreID" DomainID="-1" Pos="0" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+<COLUMN ID="1039" Name="conditionStoreDescription" DomainID="-1" Pos="1" Datatype="14" Type="VARCHAR" Width="100" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1043" />
+</REFERENCES_BEGIN>
+<INDEXES>
+<INDEX ID="1040" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1038=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1035" Name="pkn_unit" XPos="1100" YPos="300" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" FillColor="16777215" LineColor="8388608" FontColor="0" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" >
+<COLUMNS>
+<COLUMN ID="1045" Name="unitID" DomainID="-1" Pos="0" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+<COLUMN ID="1049" Name="unitSymbol" DomainID="-1" Pos="1" Datatype="14" Type="VARCHAR" Width="50" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+<COLUMN ID="1050" Name="unitName" DomainID="-1" Pos="2" Datatype="14" Type="VARCHAR" Width="50" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+<COLUMN ID="1073" Name="unitFactor" DomainID="-1" Pos="3" Datatype="5" Type="FLOAT" Width="32" Prec="12" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1074" />
+<REFERENCE_BEGIN ID="1077" />
+</REFERENCES_BEGIN>
+<INDEXES>
+<INDEX ID="1046" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1045=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1036" Name="pkn_manufactor" XPos="10" YPos="510" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" FillColor="16777215" LineColor="8388608" FontColor="0" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" >
+<COLUMNS>
+<COLUMN ID="1051" Name="manufactorID" DomainID="-1" Pos="0" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+<COLUMN ID="1052" Name="manufactorName" DomainID="-1" Pos="1" Datatype="14" Type="VARCHAR" Width="100" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1069" />
+</REFERENCES_BEGIN>
+<INDEXES>
+<INDEX ID="1053" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1051=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1037" Name="pkn_provider" XPos="260" YPos="500" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" FillColor="16777215" LineColor="8388608" FontColor="0" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" >
+<COLUMNS>
+<COLUMN ID="1056" Name="providerID" DomainID="-1" Pos="0" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+<COLUMN ID="1057" Name="providerName" DomainID="-1" Pos="1" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1058" />
+</REFERENCES_BEGIN>
+<INDEXES>
+<INDEX ID="1060" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1056=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1063" Name="pkn_materialCode" XPos="240" YPos="590" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" FillColor="16777215" LineColor="8388608" FontColor="0" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" >
+<COLUMNS>
+<COLUMN ID="1064" Name="materialCodeID" DomainID="-1" Pos="0" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+<COLUMN ID="1065" Name="materialCodeCode" DomainID="-1" Pos="1" Datatype="14" Type="VARCHAR" Width="50" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+<COLUMN ID="1070" Name="manufactorID" DomainID="-1" Pos="2" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="0" Comments="">
+</COLUMN>
+<COLUMN ID="1071" Name="materialCodeLink" DomainID="-1" Pos="3" Datatype="14" Type="VARCHAR" Width="100" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1067" />
+</REFERENCES_BEGIN>
+<REFERENCES_END>
+<REFERENCE_END ID="1069" />
+</REFERENCES_END>
+<INDEXES>
+<INDEX ID="1066" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1064=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1084" Name="pkn_certificate" XPos="1360" YPos="70" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" FillColor="16777215" LineColor="8388608" FontColor="0" CharacterSet="" Collate="" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" >
+<COLUMNS>
+<COLUMN ID="1087" Name="certificateID" DomainID="-1" Pos="0" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+<COLUMN ID="1088" Name="certificateLink" DomainID="-1" Pos="1" Datatype="3" Type="INT" Width="11" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="">
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1089" />
+</REFERENCES_BEGIN>
+<INDEXES>
+<INDEX ID="1086" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ID="1087=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+</ENTITIES>
+<REFERENCES>
+<REFERENCE ID="1013" Name="chemical name list" SOURCE="1002" DESTINATION="1001" FKIDS="1011=1014\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Comments="" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1012" AutoColumnIDs="1014\n" />
+<REFERENCE ID="1020" Name="chemical" SOURCE="1002" DESTINATION="1003" FKIDS="1011=1021\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Comments="" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1012" AutoColumnIDs="1021\n" />
+<REFERENCE ID="1024" Name="chemical material import" SOURCE="1003" DESTINATION="1006" FKIDS="1018=1025\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Comments="" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1019" AutoColumnIDs="1025\n" />
+<REFERENCE ID="1028" Name="chemical material export" SOURCE="1003" DESTINATION="1004" FKIDS="1018=1029\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Comments="" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1019" AutoColumnIDs="1029\n" />
+<REFERENCE ID="1032" Name="chemical properties" SOURCE="1002" DESTINATION="1005" FKIDS="1011=1033\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Comments="" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1012" AutoColumnIDs="1033\n" />
+<REFERENCE ID="1043" Name="conditional store" SOURCE="1034" DESTINATION="1003" FKIDS="1038=1044\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Comments="" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1040" AutoColumnIDs="1044\n" />
+<REFERENCE ID="1058" Name="provider id" SOURCE="1037" DESTINATION="1003" FKIDS="1056=1062\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Comments="" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1060" AutoColumnIDs="1061\n1062\n" />
+<REFERENCE ID="1067" Name="code PO" SOURCE="1063" DESTINATION="1003" FKIDS="1064=1068\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Comments="" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1066" AutoColumnIDs="1068\n" />
+<REFERENCE ID="1069" Name="Manufactor" SOURCE="1036" DESTINATION="1063" FKIDS="1051=1070\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Comments="" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1053" AutoColumnIDs="1070\n" />
+<REFERENCE ID="1074" Name="import unit" SOURCE="1035" DESTINATION="1006" FKIDS="1045=1075\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Comments="" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1046" AutoColumnIDs="1075\n" />
+<REFERENCE ID="1077" Name="Export unit" SOURCE="1035" DESTINATION="1004" FKIDS="1045=1078\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Comments="" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1046" AutoColumnIDs="1078\n" />
+<REFERENCE ID="1079" Name="user Import" SOURCE="1000" DESTINATION="1006" FKIDS="1007=1080\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Comments="" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1008" AutoColumnIDs="1080\n" />
+<REFERENCE ID="1081" Name="user Export" SOURCE="1000" DESTINATION="1004" FKIDS="1007=1082\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Comments="" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1008" AutoColumnIDs="1082\n" />
+<REFERENCE ID="1089" Name="chemical certificate" SOURCE="1084" DESTINATION="1006" FKIDS="1087=1090\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="3" OnUpdate="3" Comments="" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1086" AutoColumnIDs="1090\n" />
+</REFERENCES>
+<NOTES>
+</NOTES>
+<STOREDPROCES>
+</STOREDPROCES>
+<VIEWS>
+</VIEWS>
+<EVENTS>
+</EVENTS>
+</METADATA>
+</DBMODEL>
