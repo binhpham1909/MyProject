@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=N Pin=DB1-2
+Removed Member From Class: ClassName=main Member=DB1
+Added Component: Designator=*(QTO247 + heatsick)
+Added Component: Designator=DB?(DIODE BRIDGE(FLAT) BIG)
+Added Member To Class: ClassName=main Member=Component * IGBT-2N60
+Added Member To Class: ClassName=main Member=Component DB? KBU1008

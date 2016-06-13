@@ -1,0 +1,3 @@
+Change Component DesignItemId : Designator=BT1 Old DesignItemId=PIN 3V New DesignItemId=Battery3.3V
+Change Component Footprint: Designator=BT1 Old Footprint=PIN3V New Footprint=CR2032 Holder
+Change Component Comment : Designator=BT1 Old Comment=PIN 3V New Comment=Battery3.3V

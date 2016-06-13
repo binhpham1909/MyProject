@@ -1,0 +1,77 @@
+Removed Pin From Net: NetName=VCC Pin=C3-1
+Removed Pin From Net: NetName=GND Pin=C4-2
+Removed Pin From Net: NetName=VCC Pin=C5-1
+Removed Pin From Net: NetName=GND Pin=C6-2
+Removed Pin From Net: NetName=VCC Pin=D2-2
+Removed Pin From Net: NetName=VCC Pin=D3-2
+Removed Pin From Net: NetName=GND Pin=LED2-2
+Removed Pin From Net: NetName=GND Pin=LED3-2
+Removed Pin From Net: NetName=VCC Pin=OP2-4
+Removed Pin From Net: NetName=VCC Pin=OP3-4
+Removed Pin From Net: NetName=GND Pin=Q1-1
+Removed Pin From Net: NetName=NetC2_1 Pin=Q1-3
+Removed Pin From Net: NetName=GND Pin=Q2-1
+Removed Pin From Net: NetName=GND Pin=Q3-1
+Removed Pin From Net: NetName=NetOP1_3 Pin=R1-1
+Removed Pin From Net: NetName=NetC2_1 Pin=R1-2
+Removed Pin From Net: NetName=VCC Pin=R2-1
+Removed Pin From Net: NetName=NetOP1_1 Pin=R2-2
+Removed Pin From Net: NetName=VCC Pin=R4-1
+Removed Pin From Net: NetName=VCC Pin=R6-1
+Removed Pin From Net: NetName=N Pin=RL1-1
+Removed Pin From Net: NetName=OUTRL1 Pin=RL1-3
+Removed Pin From Net: NetName=VCC Pin=RL1-5
+Removed Pin From Net: NetName=N Pin=RL2-1
+Removed Pin From Net: NetName=VCC Pin=RL2-5
+Removed Pin From Net: NetName=N Pin=RL3-1
+Removed Pin From Net: NetName=VCC Pin=RL3-5
+Removed Member From Class: ClassName=main Member=C3
+Removed Member From Class: ClassName=main Member=C4
+Removed Member From Class: ClassName=main Member=C5
+Removed Member From Class: ClassName=main Member=C6
+Removed Member From Class: ClassName=main Member=D2
+Removed Member From Class: ClassName=main Member=D3
+Removed Member From Class: ClassName=main Member=LED2
+Removed Member From Class: ClassName=main Member=LED3
+Removed Member From Class: ClassName=main Member=OP2
+Removed Member From Class: ClassName=main Member=OP3
+Removed Member From Class: ClassName=main Member=Q1
+Removed Member From Class: ClassName=main Member=Q2
+Removed Member From Class: ClassName=main Member=Q3
+Removed Member From Class: ClassName=main Member=R3
+Removed Member From Class: ClassName=main Member=R4
+Removed Member From Class: ClassName=main Member=R5
+Removed Member From Class: ClassName=main Member=R6
+Removed Member From Class: ClassName=main Member=RL1
+Removed Member From Class: ClassName=main Member=RL2
+Removed Member From Class: ClassName=main Member=RL3
+Change Component DesignItemId : Designator=C1 Old DesignItemId=CAP 0805 New DesignItemId=CAP
+Change Component DesignItemId : Designator=C2 Old DesignItemId=CAP 0805 New DesignItemId=CAP
+Change Component DesignItemId : Designator=D1 Old DesignItemId=DIODE New DesignItemId=DIODE SCHOTTKY
+Change Component DesignItemId : Designator=OP1 Old DesignItemId=PC817 New DesignItemId=Opto 1
+Change Component DesignItemId : Designator=R1 Old DesignItemId=R1/4W New DesignItemId=RES
+Change Component DesignItemId : Designator=R2 Old DesignItemId=R1/4W New DesignItemId=RES
+Change Component Footprint: Designator=C1 Old Footprint=0805 New Footprint=CAP-SMD-0805
+Change Component Footprint: Designator=C2 Old Footprint=0805 New Footprint=CAP-SMD-0805
+Change Component Footprint: Designator=OP1 Old Footprint=DIP4/W0.3 New Footprint=OPTO-SMD-PC817x1
+Change Component Footprint: Designator=LED1 Old Footprint=LED-3 New Footprint=LED-3mm - green
+Change Component Footprint: Designator=R1 Old Footprint=SM-RES-0805 New Footprint=R-SMD-0805
+Change Component Footprint: Designator=R2 Old Footprint=SM-RES-0805 New Footprint=R-SMD-0805
+Change Component Footprint: Designator=D1 Old Footprint=SMB New Footprint=SMA
+Change Component Comment : Designator=C1 Old Comment=CAP 0805 New Comment=104
+Change Component Comment : Designator=C2 Old Comment=CAP 0805 New Comment=104
+Change Component Comment : Designator=D1 Old Comment=DIODE New Comment=DIODE SCHOTTKY
+Change Component Comment : Designator=LED1 Old Comment=LED New Comment=GREEN
+Change Component Comment : Designator=OP1 Old Comment=PC817 New Comment=PC-817
+Added Component: Designator=T1(SOT23B)
+Added Pin To Net: NetName=VCC Pin=R1-1
+Added Pin To Net: NetName=NetOP1_1 Pin=R1-2
+Added Pin To Net: NetName=NetOP1_3 Pin=R2-1
+Added Pin To Net: NetName=NetC2_1 Pin=R2-2
+Added Pin To Net: NetName=GND Pin=T1-1
+Added Pin To Net: NetName=NetC2_1 Pin=T1-3
+Added Pin To Net: NetName=Net*_4 Pin=C1-2
+Added Pin To Net: NetName=Net*_4 Pin=D1-1
+Added Pin To Net: NetName=Net*_4 Pin=T1-2
+Added Net: Name=Net*_4
+Added Member To Class: ClassName=main Member=Component T1 C1815

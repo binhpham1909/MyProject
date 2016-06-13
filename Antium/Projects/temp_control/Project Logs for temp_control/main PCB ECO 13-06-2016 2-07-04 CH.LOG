@@ -1,0 +1,149 @@
+Removed Pin From Net: NetName=N Pin=K?-1
+Removed Pin From Net: NetName=OUTRL1 Pin=K?-3
+Removed Pin From Net: NetName=NetC1_2 Pin=K?-4
+Removed Pin From Net: NetName=VCC Pin=K?-5
+Removed Pin From Net: NetName=GND Pin=LED1-2
+Removed Member From Class: ClassName=main Member=*
+Removed Member From Class: ClassName=main Member=K?
+Removed Member From Class: ClassName=main Member=RDIP
+Added Component: Designator=C3(CAP-SMD-0805)
+Added Component: Designator=C4(CAP-SMD-0805)
+Added Component: Designator=C5(CAP-SMD-0805)
+Added Component: Designator=C6(CAP-SMD-0805)
+Added Component: Designator=C7(CAPP-12mm)
+Added Component: Designator=D2(SMA)
+Added Component: Designator=D3(SMA)
+Added Component: Designator=D4(SMA)
+Added Component: Designator=IGBT1(QTO-247)
+Added Component: Designator=LED2(LED-3mm - green)
+Added Component: Designator=LED3(LED-3mm - green)
+Added Component: Designator=OP2(OPTO-SMD-PC817x1)
+Added Component: Designator=OP3(OPTO-SMD-PC817x1)
+Added Component: Designator=OP4(DIP6 - white)
+Added Component: Designator=R3(R-SMD-0805)
+Added Component: Designator=R4(R-SMD-0805)
+Added Component: Designator=R5(R-SMD-0805)
+Added Component: Designator=R6(R-SMD-0805)
+Added Component: Designator=R7(DIEN TRO 1/4 W)
+Added Component: Designator=R8(DIEN TRO 1/4 W)
+Added Component: Designator=R9(R-SMD-0805)
+Added Component: Designator=RL1(RL_SPDT_10A)
+Added Component: Designator=RL2(RL_SPDT_10A)
+Added Component: Designator=RL3(RL_SPDT_10A)
+Added Component: Designator=T2(SOT23B)
+Added Component: Designator=T3(SOT23B)
+Added Pin To Net: NetName=VCC Pin=C3-1
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=VCC Pin=C5-1
+Added Pin To Net: NetName=GND Pin=C6-2
+Added Pin To Net: NetName=VCC Pin=D2-2
+Added Pin To Net: NetName=VCC Pin=D3-2
+Added Pin To Net: NetName=N Pin=DB1-2
+Added Pin To Net: NetName=VCC Pin=OP2-4
+Added Pin To Net: NetName=VCC Pin=OP3-4
+Added Pin To Net: NetName=VCC Pin=R3-1
+Added Pin To Net: NetName=VCC Pin=R5-1
+Added Pin To Net: NetName=GND Pin=R9-1
+Added Pin To Net: NetName=N Pin=RL1-1
+Added Pin To Net: NetName=OUTRL1 Pin=RL1-3
+Added Pin To Net: NetName=NetC1_2 Pin=RL1-4
+Added Pin To Net: NetName=VCC Pin=RL1-5
+Added Pin To Net: NetName=N Pin=RL2-1
+Added Pin To Net: NetName=VCC Pin=RL2-5
+Added Pin To Net: NetName=N Pin=RL3-1
+Added Pin To Net: NetName=VCC Pin=RL3-5
+Added Pin To Net: NetName=GND Pin=T2-1
+Added Pin To Net: NetName=GND Pin=T3-1
+Added Pin To Net: NetName=+ACPWM Pin=D4-1
+Added Pin To Net: NetName=+ACPWM Pin=DB1-1
+Added Net: Name=+ACPWM
+Added Pin To Net: NetName=INRL1 Pin=LED1-2
+Added Net: Name=INRL1
+Added Pin To Net: NetName=INRL2 Pin=LED2-2
+Added Net: Name=INRL2
+Added Pin To Net: NetName=INRL3 Pin=LED3-2
+Added Net: Name=INRL3
+Added Pin To Net: NetName=L Pin=DB1-3
+Added Net: Name=L
+Added Pin To Net: NetName=NetC3_2 Pin=C3-2
+Added Pin To Net: NetName=NetC3_2 Pin=D2-1
+Added Pin To Net: NetName=NetC3_2 Pin=RL2-4
+Added Pin To Net: NetName=NetC3_2 Pin=T2-2
+Added Net: Name=NetC3_2
+Added Pin To Net: NetName=NetC4_1 Pin=C4-1
+Added Pin To Net: NetName=NetC4_1 Pin=R4-2
+Added Pin To Net: NetName=NetC4_1 Pin=T2-3
+Added Net: Name=NetC4_1
+Added Pin To Net: NetName=NetC5_2 Pin=C5-2
+Added Pin To Net: NetName=NetC5_2 Pin=D3-1
+Added Pin To Net: NetName=NetC5_2 Pin=RL3-4
+Added Pin To Net: NetName=NetC5_2 Pin=T3-2
+Added Net: Name=NetC5_2
+Added Pin To Net: NetName=NetC6_1 Pin=C6-1
+Added Pin To Net: NetName=NetC6_1 Pin=R6-2
+Added Pin To Net: NetName=NetC6_1 Pin=T3-3
+Added Net: Name=NetC6_1
+Added Pin To Net: NetName=NetC7_1 Pin=C7-1
+Added Pin To Net: NetName=NetC7_1 Pin=D4-2
+Added Pin To Net: NetName=NetC7_1 Pin=R7-2
+Added Net: Name=NetC7_1
+Added Pin To Net: NetName=NetC7_2 Pin=C7-2
+Added Pin To Net: NetName=NetC7_2 Pin=DB1-4
+Added Pin To Net: NetName=NetC7_2 Pin=OP4-4
+Added Pin To Net: NetName=NetC7_2 Pin=R8-1
+Added Net: Name=NetC7_2
+Added Pin To Net: NetName=NetLED2_1 Pin=LED2-1
+Added Pin To Net: NetName=NetLED2_1 Pin=OP2-2
+Added Net: Name=NetLED2_1
+Added Pin To Net: NetName=NetLED3_1 Pin=LED3-1
+Added Pin To Net: NetName=NetLED3_1 Pin=OP3-2
+Added Net: Name=NetLED3_1
+Added Pin To Net: NetName=NetOP2_1 Pin=OP2-1
+Added Pin To Net: NetName=NetOP2_1 Pin=R3-2
+Added Net: Name=NetOP2_1
+Added Pin To Net: NetName=NetOP2_3 Pin=OP2-3
+Added Pin To Net: NetName=NetOP2_3 Pin=R4-1
+Added Net: Name=NetOP2_3
+Added Pin To Net: NetName=NetOP3_1 Pin=OP3-1
+Added Pin To Net: NetName=NetOP3_1 Pin=R5-2
+Added Net: Name=NetOP3_1
+Added Pin To Net: NetName=NetOP3_3 Pin=OP3-3
+Added Pin To Net: NetName=NetOP3_3 Pin=R6-1
+Added Net: Name=NetOP3_3
+Added Pin To Net: NetName=NetOP4_2 Pin=OP4-2
+Added Pin To Net: NetName=NetOP4_2 Pin=R9-2
+Added Net: Name=NetOP4_2
+Added Pin To Net: NetName=NetOP4_5 Pin=OP4-5
+Added Pin To Net: NetName=NetOP4_5 Pin=R7-1
+Added Pin To Net: NetName=NetOP4_5 Pin=R8-2
+Added Net: Name=NetOP4_5
+Added Pin To Net: NetName=OUTRL2 Pin=RL2-3
+Added Net: Name=OUTRL2
+Added Pin To Net: NetName=OUTRL3 Pin=RL3-3
+Added Net: Name=OUTRL3
+Added Member To Class: ClassName=main Member=Component C3 104
+Added Member To Class: ClassName=main Member=Component C4 104
+Added Member To Class: ClassName=main Member=Component C5 104
+Added Member To Class: ClassName=main Member=Component C6 104
+Added Member To Class: ClassName=main Member=Component C7 400V 22uF
+Added Member To Class: ClassName=main Member=Component D2 DIODE SCHOTTKY
+Added Member To Class: ClassName=main Member=Component D3 DIODE SCHOTTKY
+Added Member To Class: ClassName=main Member=Component D4 DIODE SCHOTTKY
+Added Member To Class: ClassName=main Member=Component IGBT1 2N60
+Added Member To Class: ClassName=main Member=Component LED2 GREEN
+Added Member To Class: ClassName=main Member=Component LED3 GREEN
+Added Member To Class: ClassName=main Member=Component OP2 PC-817
+Added Member To Class: ClassName=main Member=Component OP3 PC-817
+Added Member To Class: ClassName=main Member=Component OP4 4N35
+Added Member To Class: ClassName=main Member=Component R3 1k
+Added Member To Class: ClassName=main Member=Component R4 1k
+Added Member To Class: ClassName=main Member=Component R5 1k
+Added Member To Class: ClassName=main Member=Component R6 1k
+Added Member To Class: ClassName=main Member=Component R7 1k
+Added Member To Class: ClassName=main Member=Component R8 1k
+Added Member To Class: ClassName=main Member=Component R9 1k
+Added Member To Class: ClassName=main Member=Component RL1 5V 10A
+Added Member To Class: ClassName=main Member=Component RL2 5V 10A
+Added Member To Class: ClassName=main Member=Component RL3 5V 10A
+Added Member To Class: ClassName=main Member=Component T2 C1815
+Added Member To Class: ClassName=main Member=Component T3 C1815

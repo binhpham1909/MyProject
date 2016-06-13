@@ -1,0 +1,6 @@
+Added Component: Designator=K?(RL_SPDT_10A)
+Added Pin To Net: NetName=N Pin=K?-1
+Added Pin To Net: NetName=OUTRL1 Pin=K?-3
+Added Pin To Net: NetName=NetC1_2 Pin=K?-4
+Added Pin To Net: NetName=VCC Pin=K?-5
+Added Member To Class: ClassName=main Member=Component K? RELAY-SPDT

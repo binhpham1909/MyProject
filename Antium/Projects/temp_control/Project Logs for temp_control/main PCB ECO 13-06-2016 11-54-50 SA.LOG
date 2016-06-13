@@ -1,0 +1,3 @@
+Removed Member From Class: ClassName=main Member=IGBT1
+Added Component: Designator=*(QTO-247)
+Added Member To Class: ClassName=main Member=Component * IGBT-2N60

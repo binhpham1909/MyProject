@@ -1,0 +1,3 @@
+Change Component Comment : Designator=* Old Comment=IGBT-2N60 New Comment=IGBT1
+Change Component Designator: OldDesignator=* NewDesignator=2N60
+Change Component Designator: OldDesignator=DB? NewDesignator=DB1

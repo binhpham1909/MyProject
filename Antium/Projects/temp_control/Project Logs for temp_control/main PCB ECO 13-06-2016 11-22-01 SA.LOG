@@ -1,0 +1,2 @@
+Change Component DesignItemId : Designator=SPK1 Old DesignItemId=SPK New DesignItemId=Speaker
+Change Component Footprint: Designator=SPK1 Old Footprint=SPK New Footprint=SPEAKER-Chip
